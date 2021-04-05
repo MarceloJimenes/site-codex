@@ -43,13 +43,13 @@
 								</a>
 								<!-- botao para download -->
 								<span class="navbar-item">
-                                    <a class="button is-success is-inverted">
-                                        <span class="icon">
-                                            <i class="fab fa-github"></i>
-                                        </span>
-                                        <span>Download</span>
-                                    </a>
-                                </span>
+									<a class="button is-success is-inverted">
+											<span class="icon">
+													<i class="fab fa-github"></i>
+											</span>
+											<span>Download</span>
+									</a>
+								</span>
 							</div>
 						</div>
 					</div>
@@ -60,33 +60,33 @@
 			<div class="hero-body">
 
 				<div class="container">
-                <link rel="stylesheet" href="../../styles/backgrounds.scss">
+					<link rel="stylesheet" href="../../styles/backgrounds.scss">
 
 					<form class="form" action="../../scripts/php/register/cadastrar_usuario.php" method="post">
 
 						<h1 class="label has-text-centered">Cadastro</h1>
 
-                        <figure>
-                            <!-- aqui vai a logo do codex -->
-                            <img src="" alt="">
-                        </figure>
+						<figure>
+								<!-- aqui vai a logo do codex -->
+								<img src="" alt="">
+						</figure>
 						
 						<div>
 							<label class="label">Nome Completo: <span>*</span> </label>
 							<input class="input" type="text" name="nome" required/>
 						</div>
 
-                        <div>
+						<div>
 							<label class="label">Usuário: <span>*</span></label>
 							<input class="input" type="text" name="usuario" required/>
 						</div>
 
-                        <div>
+						<div>
 							<label class="label">Senha: <span>*</span></label>
 							<input class="input" type="password" name="senha" required/>
 						</div>
 
-                        <div>
+						<div>
 							<label class="label">Confirmação de senha: <span>*</span></label>
 							<input class="input" type="password" name="confirma_senha" required/>
 						</div>
