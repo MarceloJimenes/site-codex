@@ -15,7 +15,6 @@
     <title>Codex - Coding Experience</title>
 </head>
 <body>
-
     <main>
         <section class="hero is-fullheight">
             <!-- HERO HEAD -->
@@ -76,7 +75,6 @@
 
         </section>
     </main>
-
-    
+ 
 </body>
 </html>
