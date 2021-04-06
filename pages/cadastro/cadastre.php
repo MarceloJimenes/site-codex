@@ -45,6 +45,9 @@
 								<a href="../login/login.php" class="navbar-item">
 									Login
 								</a>
+								<a class="navbar-item" href="../sobre-nos/sobre-nos.php">
+                    sobre nós
+                </a>
 								<!-- botao para download -->
 								<span class="navbar-item">
 									<a class="button is-success is-inverted">

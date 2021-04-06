@@ -1,3 +1,11 @@
 .hero {
   background-color: #4c0b8a;
 }
+
+.title, .subtitle {
+  color: #fff;
+}
+
+a.navbar-item {
+  color: #fff;
+}

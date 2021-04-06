@@ -62,15 +62,23 @@
             <!-- HERO CONTENT -->
 
             <div class="hero-body container">
-            
+
+                <div class='hero-body left-content'>
+
+                    <figure>
+                    
+                        <img src="assets/svgs/undraw_Astronaut_re_8c33.svg" alt="" srcset="">
+                    
+                    </figure>
+                    <h1 class="title">Seja bem vindo ao <span class="pixie-span">CODEX!</span></h1>
+                </div>
+
                 <figure>
                 
                     <img src="assets/logo-codex/logo.png" alt="" srcset="">
                 
                 </figure>
 
-                <h1 class="title">Seja bem vindo ao CODEX!</h1>
-            
             </div>
 
         </section>

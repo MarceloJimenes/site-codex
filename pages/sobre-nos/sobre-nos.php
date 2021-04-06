@@ -33,14 +33,17 @@
             <!-- Default menu -->
             <div id="navbarMenuHeroC" class="navbar-menu">
               <div class="navbar-end">
-                <a class="navbar-item" href="#">
+                <a class="navbar-item" href="../../index.php">
                     Página inicial
                 </a>
-                <a class="navbar-item" href="pages/login/login.php">
+                <a class="navbar-item" href="../login/login.php">
                     Login
                 </a>
-                <a class="navbar-item" href="pages/cadastro/cadastre.php">
+                <a class="navbar-item" href="../cadastro/cadastre.php">
                     Cadastre-se
+                </a>
+                <a class="navbar-item" href="#">
+                    sobre nós
                 </a>
                 <!-- botao para download -->
                 <span class="navbar-item">
