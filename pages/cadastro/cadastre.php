@@ -41,13 +41,13 @@
 								<a class="navbar-item" href="../../index.php">
 									Página inicial
 								</a>
+								<a href="../login/login.php" class="navbar-item">
+									Login
+								</a>
 								<!-- botao para download -->
 								<span class="navbar-item">
 									<a class="button is-success is-inverted">
-											<span class="icon">
-													<i class="fab fa-github"></i>
-											</span>
-											<span>Download</span>
+										<span>Download</span>
 									</a>
 								</span>
 							</div>

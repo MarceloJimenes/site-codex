@@ -38,14 +38,16 @@
                             <div class="navbar-end">
                                 <a class="navbar-item" href="#">
                                     Página inicial
-                                </a><a class="navbar-item" href="pages/login.php">
+                                </a>
+                                <a class="navbar-item" href="pages/login/login.php">
                                     Login
-                                </a><a class="navbar-item" href="pages/cadasre.php">
+                                </a>
+                                <a class="navbar-item" href="pages/cadastro/cadastre.php">
                                     Cadastre-se
                                 </a>
                                 <!-- botao para download -->
                                 <span class="navbar-item">
-                                    <a class="button is-success is-inverted">
+                                    <a class="button is-download-button is-inverted">
                                         <span>Download</span>
                                     </a>
                                 </span>
