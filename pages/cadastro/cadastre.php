@@ -8,7 +8,7 @@
 	<!-- links -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="../../theme/global.css">
 	
 
@@ -50,7 +50,7 @@
                 </a>
 								<!-- botao para download -->
 								<span class="navbar-item">
-									<a class="button is-success is-inverted">
+									<a class="button is-download-button is-inverted">
 										<span>Download</span>
 									</a>
 								</span>
@@ -64,6 +64,7 @@
 			<div class="hero-body">
 
 				<div class="container">
+
 					<link rel="stylesheet" href="../../styles/backgrounds.scss">
 
 					<form class="form" action="../../scripts/php/register/user_register.php" method="post">
@@ -100,7 +101,8 @@
 							<label class="label">E-mail: <span>*</span></label>
 							<input class="input" type="text" name="email" required/>
 						</div>
-
+						
+						<br>
 
 						<div class="botoes has-text-centered">
 							<input class="button is-success" type="submit" value="Cadastrar"/>

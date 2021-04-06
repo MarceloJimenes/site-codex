@@ -23,7 +23,7 @@
                     <div class="container">
                         <div class="navbar-brand">
                             <a class="navbar-item" href="../../index.php">
-                                <p class="title">
+                                <p class="title title-codex">
                                     CODEX
                                 </p>
                             </a>
@@ -47,6 +47,9 @@
                                 <a class="navbar-item" href="pages/cadastro/cadastre.php">
                                     Cadastre-se
                                 </a>
+                                <a class="navbar-item" href="pages/sobre-nos/sobre-nos.php">
+                                    sobre nós
+                                </a>
                                 <!-- botao para download -->
                                 <span class="navbar-item">
                                     <a class="button is-download-button is-inverted">
@@ -61,23 +64,27 @@
 
             <!-- HERO CONTENT -->
 
-            <div class="hero-body container">
+            <div class="hero-body">
 
-                <div class='hero-body left-content'>
+                <section>
+                    <div class='hero-body left-content'>
+
+                        <figure>
+
+                            <img src="assets/svgs/undraw_Astronaut_re_8c33.svg" alt="" srcset="">
+
+                        </figure>
+                        <h1 class="title">Seja bem vindo ao <span class="pixie-span">CODEX!</span></h1>
+                    </div>
 
                     <figure>
-                    
-                        <img src="assets/svgs/undraw_Astronaut_re_8c33.svg" alt="" srcset="">
-                    
-                    </figure>
-                    <h1 class="title">Seja bem vindo ao <span class="pixie-span">CODEX!</span></h1>
-                </div>
 
-                <figure>
+                    <img src="assets/logo-codex/logo.png" width="400px">
+
+                    </figure>
+                </section>
+
                 
-                    <img src="assets/logo-codex/logo.png" alt="" srcset="">
-                
-                </figure>
 
             </div>
 

@@ -16,3 +16,9 @@
 .left-content figure {
   width: 300px;
 }
+
+.hero-body section {
+  width: 85vw;
+  display: flex;
+  align-items: center;
+}
