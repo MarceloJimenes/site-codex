@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'pro-pixie';
+  src: url(../fonts/ProcrastinatingPixie-WyVOO.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  font-family: 'pro-pixie';
+}
