@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
     <link rel="stylesheet" href="style.scss">
+		<link rel="stylesheet" href="../../theme/global.css">
 	
 
 	<title>Cadastro de Usuário</title>
@@ -23,7 +24,7 @@
 					<div class="container">
 						<div class="navbar-brand">
 							<a class="navbar-item" href="../../index.php">
-									<p class="title logo-title-menu">
+									<p class="title title-codex">
 										CODEX
 									</p>
 								</a>
@@ -62,7 +63,7 @@
 				<div class="container">
 					<link rel="stylesheet" href="../../styles/backgrounds.scss">
 
-					<form class="form" action="../../scripts/php/register/user-register.php" method="post">
+					<form class="form" action="../../scripts/php/register/user_register.php" method="post">
 
 						<h1 class="label has-text-centered">Cadastro</h1>
 
