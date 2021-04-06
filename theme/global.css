@@ -5,6 +5,25 @@
   font-style: normal;
 }
 
-*{
-  font-family: 'pro-pixie';
+main {
+  background-color: #4c0b8a;
+}
+
+a.navbar-item{
+  color: #fff;
+  transition: 0.2s;
+}
+
+.is-download-button {
+  transition: 0.3s;
+}
+
+.is-download-button:hover {
+  background-color: #4c0b8a;
+  color: #fff;
+}
+
+a.navbar-item:hover {
+  background-color: #fff3f3;
+  color: #4c0b8a;
 }
