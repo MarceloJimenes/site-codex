@@ -62,7 +62,7 @@
 				<div class="container">
 					<link rel="stylesheet" href="../../styles/backgrounds.scss">
 
-					<form class="form" action="../../scripts/php/register/cadastrar_usuario.php" method="post">
+					<form class="form" action="../scripts/php/register/cadastrar_usuario.php" method="post">
 
 						<h1 class="label has-text-centered">Cadastro</h1>
 
