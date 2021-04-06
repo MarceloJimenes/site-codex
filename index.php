@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
+    <link rel="stylesheet" href="style.scss">
+
     <title>Codex - Coding Experience</title>
 </head>
 <body>
@@ -19,10 +21,10 @@
                     <div class="container">
                         <div class="navbar-brand">
                             <a class="navbar-item" href="../../index.php">
-                                    <p class="title logo-title-menu">
-                                        CODEX
-                                    </p>
-                                </a>
+                                <p class="title logo-title-menu">
+                                    CODEX
+                                </p>
+                            </a>
                             <!-- Menu responsivo -->
                             <span class="navbar-burger" data-target="navbarMenuHeroC">
                                 <span></span>
@@ -36,17 +38,14 @@
                             <div class="navbar-end">
                                 <a class="navbar-item" href="#">
                                     Página inicial
-                                </a>
-                                <a class = "navbar-item" href="#">
-                                    <li><a href="pages/login.php">Login</a></li>
-                                    <li><a href="pages/cadastre.php">Cadastre-se</a></li>
+                                </a><a class="navbar-item" href="pages/login.php">
+                                    Login
+                                </a><a class="navbar-item" href="pages/cadasre.php">
+                                    Cadastre-se
                                 </a>
                                 <!-- botao para download -->
                                 <span class="navbar-item">
                                     <a class="button is-success is-inverted">
-                                        <span class="icon">
-                                                <i class="fab -fa-github"></i>
-                                        </span>
                                         <span>Download</span>
                                     </a>
                                 </span>
