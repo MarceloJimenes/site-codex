@@ -7,7 +7,10 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
 
     <title>Codex - Coding Experience</title>
 </head>
@@ -21,7 +24,7 @@
                     <div class="container">
                         <div class="navbar-brand">
                             <a class="navbar-item" href="../../index.php">
-                                <p class="title logo-title-menu">
+                                <p class="title">
                                     CODEX
                                 </p>
                             </a>
@@ -61,8 +64,13 @@
 
             <div class="hero-body container">
             
-                <h1 class="title">Seja bem vindo ao CODEX!</h1>
+                <figure>
                 
+                    <img src="assets/logo-codex/logo.png" alt="" srcset="">
+                
+                </figure>
+
+                <h1 class="title">Seja bem vindo ao CODEX!</h1>
             
             </div>
 
