@@ -1,20 +1,4 @@
-<?php 
-    session_start();
-    if (isset($_SESSION["username"])) {
-        echo '
-            teste pra ver se funfa
-            <script>
-                document.querySelector("#login").style.display = "none";
-                document.querySelector("#register").style.display = "none";
-            </script>
-        ';
 
-    }else{
-        
-
-    }
-
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -73,6 +57,31 @@
                                         <span>Download</span>
                                     </a>
                                 </span>
+
+                                <a id="logout" class="navbar-item" href="scripts/php/logout/logout.php">
+                                    <img src="assets/svgs/logout_white_24dp.svg" a>
+                                </a>
+
+                                <?php 
+                                    session_start();
+                                    if (isset($_SESSION["username"])) {
+                                        echo '
+                                            <script>
+                                                document.querySelector("#login").style.display = "none";
+                                                document.querySelector("#register").style.display = "none";
+                                            </script>
+                                        ';
+
+                                    }else{
+                                        echo '
+                                            <script>
+                                                document.querySelector("#logout").style.display = "none";
+                                                document.querySelector("#welcome").style.display = "none";
+                                            </script>
+                                        ';                                        
+                                    }
+
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -91,7 +100,7 @@
                             <img src="assets/svgs/undraw_Astronaut_re_8c33.svg" alt="" srcset="">
 
                         </figure>
-                        <h1 class="title">Seja bem vindo ao <span class="pixie-span">CODEX!</span></h1>
+                        <h1 class="title">Seja bem vindo ao <span class="pixie-span">CODEX </span><span id="welcome"><?php echo $_SESSION['username']; ?></span>!</h1>
                     </div>
 
                     <figure>
@@ -101,7 +110,7 @@
                     </figure>
                 </section>
 
-                
+                	
 
             </div>
 
