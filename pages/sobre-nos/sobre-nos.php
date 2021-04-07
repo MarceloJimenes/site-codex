@@ -18,7 +18,7 @@
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item" href="../../index.php">
-                <p class="title logo-title-menu">
+                <p class="title title-codex">
                   CODEX
                 </p>
               </a>
@@ -69,7 +69,7 @@
           <div class="column">
             <p class="title is-3 is-spaced">Quem Somos?</p>
             <p class="subtitle is- 5">
-              Nós somos um grupo muito sério, onde cada um tem sua função - O Bobo da Corte, o Escritor E-Girl, o Gerenciador do 'Cu do X' e o Tchelo Osmar (primo do seu pai)...
+              Nós somos um grupo formado por quatro membros, onde cada um tem sua função ["..."]<!-- O Bobo da Corte, o Escritor E-Girl, o Gerenciador de Tarefas e o Forever Alone ... --> 
             </p>
           </div>
           

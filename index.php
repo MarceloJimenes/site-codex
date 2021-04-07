@@ -1,3 +1,20 @@
+<?php 
+    session_start();
+    if (isset($_SESSION["username"])) {
+        echo '
+            teste pra ver se funfa
+            <script>
+                document.querySelector("#login").style.display = "none";
+                document.querySelector("#register").style.display = "none";
+            </script>
+        ';
+
+    }else{
+        
+
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -41,10 +58,10 @@
                                 <a class="navbar-item" href="#">
                                     Página inicial
                                 </a>
-                                <a class="navbar-item" href="pages/login/login.php">
+                                <a class="navbar-item" href="pages/login/login.php" id = "login">
                                     Login
                                 </a>
-                                <a class="navbar-item" href="pages/cadastro/cadastre.php">
+                                <a class="navbar-item" href="pages/cadastro/cadastre.php" id = "register">
                                     Cadastre-se
                                 </a>
                                 <a class="navbar-item" href="pages/sobre-nos/sobre-nos.php">

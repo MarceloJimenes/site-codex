@@ -10,7 +10,11 @@
 
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="../../theme/global.css">
-		<script src="../../scripts/javascript/sweetalert2.js"></script>
+		<!-- <script src="../../scripts/javascript/sweetalert2.js"></script> -->
+		
+		<!-- SweetAlert DarkTheme -->
+		<link rel="stylesheet" href="../../node_modules/@sweetalert2/theme-dark/dark.css">
+		<script src="../../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
 
 
 	<title>Login</title>
@@ -97,6 +101,8 @@
 	</main>
 	<?php
 		require_once "../../scripts/banco/conexao.php";
+
+		session_start();
   
 		if(isset($_POST['login']) && isset($_POST['pass'])) { 
 
@@ -111,38 +117,55 @@
       $fetchUserEmail = mysqli_num_rows($fetchForEmail);
 
       if ($fetchUserNick == 1) {
-
-        echo"
-					Swal.fire({
-						position: 'top-end',
-						icon: 'success',
-						title: 'Seja bem vindo, ',
-						showConfirmButton: false,
-						timer: 1500
-					})
+				$data = $fetchForNick -> fetch_assoc();
+				$_SESSION['username'] = $data['nick'];
 				
+        echo"
+					<script>
+						location.href = '../../index.php';
+					</script>
 				";
 
       } else if ($fetchUserEmail == 1) {
+				$data = $fetchForEmail -> fetch_assoc();
+				$_SESSION['username'] = $data['nick'];
 
-        echo"Login encontrado por email";
+        echo"
+					<script>
+						location.href = '../../index.php';
+					</script>
+				";
 
       } else {
 				echo"
 					<script>
 						Swal.fire({
-							position: 'top-end',
+							position: 'top',
 							toast: 'true',
 							icon: 'error',
 							title: 'Ops!',
 							footer: 'Dados de usuário incorretos ou inexistentes',
 							showConfirmButton: false,
-							timer: 3000
+							timer: 5000
 						})
 					</script>
 				";
       }
-    }
+    }else{
+			/*echo "
+				<script>
+					Swal.fire({
+						position: 'top',
+						toast: 'true',
+						icon: 'error',
+						title: 'Ops!',
+						footer: 'Os campos não podem estar vazios, tente novamente',
+						showConfirmButton: false,
+						timer: 5000
+					})
+				</script>
+			";*/
+		}
 	?>
 </body>
 </html>
