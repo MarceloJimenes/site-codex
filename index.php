@@ -22,7 +22,7 @@
                 <header class="navbar">
                     <div class="container">
                         <div class="navbar-brand">
-                            <a class="navbar-item" href="../../index.php">
+                            <a class="navbar-item" href="index.php">
                                 <p class="title title-codex">
                                     CODEX
                                 </p>
@@ -48,7 +48,7 @@
                                     Cadastre-se
                                 </a>
                                 <a class="navbar-item" href="pages/sobre-nos/sobre-nos.php">
-                                    sobre nós
+                                    Sobre nós
                                 </a>
                                 <!-- botao para download -->
                                 <span class="navbar-item">

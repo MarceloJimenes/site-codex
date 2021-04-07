@@ -46,7 +46,7 @@
 									Login
 								</a>
 								<a class="navbar-item" href="../sobre-nos/sobre-nos.php">
-                    sobre nós
+                    Sobre nós
                 </a>
 								<!-- botao para download -->
 								<span class="navbar-item">
@@ -64,8 +64,6 @@
 			<div class="hero-body">
 
 				<div class="container">
-
-					<link rel="stylesheet" href="../../styles/backgrounds.scss">
 
 					<form class="form" action="../../scripts/php/register/user_register.php" method="post">
 

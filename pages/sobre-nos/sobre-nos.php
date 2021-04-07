@@ -43,7 +43,7 @@
                     Cadastre-se
                 </a>
                 <a class="navbar-item" href="#">
-                    sobre nós
+                    Sobre nós
                 </a>
                 <!-- botao para download -->
                 <span class="navbar-item">
