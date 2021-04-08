@@ -7,3 +7,13 @@
 .title{
   color: #fff;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin: 5px 0;
+}

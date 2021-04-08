@@ -71,20 +71,18 @@
 					
 						<form class="form" action="" method ="POST">
 
-							<h1 class="label has-text-centered">Login</h1>
-
 							<figure>
 								<!-- Aqui vai a logo do CODEX -->
-								<img src="" alt=""/>
+								<img width="200px" src="../../assets/logo-codex/logo.png" alt=""/>
 							</figure>
 
 							<div>
-								<label class="label">Login:</label>
+								<label class="label">usuário:</label>
 								<input class="input" type="text" name="login" placeholder="E-mail ou Usuário" required/>
 							</div>
-
+							<br>
 							<div>
-								<label class="label">Senha:</label>
+								<label class="label">senha:</label>
 								<input class="input" type="password" name="pass" required/>
 							</div>
 

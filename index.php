@@ -90,27 +90,20 @@
 
             <!-- HERO CONTENT -->
 
-            <div class="hero-body">
+            <div class="hero-body is-container">
 
                 <section>
                     <div class='hero-body left-content'>
-
                         <figure>
-
-                            <img src="assets/svgs/undraw_Astronaut_re_8c33.svg" alt="" srcset="">
-
+                            <img src="assets/svgs/astronauta2.svg" alt="astronauta">
                         </figure>
-                        <h1 class="title">Seja bem vindo ao <span class="pixie-span">CODEX </span><span id="welcome"><?php echo $_SESSION['username']; ?></span>!</h1>
                     </div>
 
                     <figure>
-
-                    <img src="assets/logo-codex/logo.png" width="400px">
-
+                        <img src="assets/logo-codex/logo.png" width="400px">
+                        <h1 class="title">Seja bem vindo ao <span class="pixie-span">CODEX </span><span id="welcome"><?php echo $_SESSION['username']; ?></span>!</h1>
                     </figure>
                 </section>
-
-                	
 
             </div>
 

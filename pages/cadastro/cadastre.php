@@ -67,13 +67,10 @@
 
 					<form class="form" action="../../scripts/php/register/user_register.php" method="post">
 
-						<h1 class="label has-text-centered">Cadastro</h1>
+						<img src="../../assets/logo-codex/logo.png" width="100px" alt="" srcset="">
 
-						<figure>
-								<!-- aqui vai a logo do codex -->
-								<img src="" alt="">
-						</figure>
-						
+					<!-- 	<h1 class="label has-text-centered">Cadastre - se</h1> -->
+
 						<div>
 							<label class="label">Nome Completo: <span>*</span> </label>
 							<input class="input" type="text" name="nome" required/>
@@ -82,6 +79,11 @@
 						<div>
 							<label class="label">Usuário: <span>*</span></label>
 							<input class="input" type="text" name="usuario" required/>
+						</div>
+
+						<div>
+							<label class="label">E-mail: <span>*</span></label>
+							<input class="input" type="text" name="email" required/>
 						</div>
 
 						<div>
@@ -94,12 +96,6 @@
 							<input class="input" type="password" name="confirma_senha" required/>
 						</div>
 
-
-						<div>
-							<label class="label">E-mail: <span>*</span></label>
-							<input class="input" type="text" name="email" required/>
-						</div>
-						
 						<br>
 
 						<div class="botoes has-text-centered">

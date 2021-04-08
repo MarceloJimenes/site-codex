@@ -17,6 +17,14 @@
   width: 300px;
 }
 
+.is-container {
+  background-image: url('assets/svgs/moon3.svg');
+  background-repeat: no-repeat;
+  background-size: 1500px;
+  background-position-y: 45vh;
+  background-position-x: -45vw;
+}
+
 .hero-body section {
   width: 85vw;
   display: flex;
