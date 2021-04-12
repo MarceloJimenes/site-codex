@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -58,12 +58,20 @@
                                     </a>
                                 </span>
 
+                                <p id="profile" class="navbar-item" style="color: #fff; font-size: 12pt; cursor: pointer;">
+                                
+                                    <img src="assets/svgs/person_outline_white_24dp.svg">
+
+                                    <?php echo "<span style='margin: 5px 0 0 4px;'>$_SESSION[username]</span>"; ?>
+                                
+                                </p>
+
                                 <a id="logout" class="navbar-item" href="scripts/php/logout/logout.php">
-                                    <img src="assets/svgs/logout_white_24dp.svg" a>
+                                    <img src="assets/svgs/logout_white_24dp.svg">
                                 </a>
 
                                 <?php 
-                                    session_start();
+                                    /* session_start(); */
                                     if (isset($_SESSION["username"])) {
                                         echo '
                                             <script>
@@ -75,8 +83,11 @@
                                     }else{
                                         echo '
                                             <script>
+                                                document.querySelector("#profile").style.display = "none";
                                                 document.querySelector("#logout").style.display = "none";
                                                 document.querySelector("#welcome").style.display = "none";
+                                                
+
                                             </script>
                                         ';                                        
                                     }
