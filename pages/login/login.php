@@ -77,13 +77,13 @@
 							</figure>
 
 							<div>
-								<label class="label">usuário:</label>
-								<input class="input" type="text" name="login" placeholder="E-mail ou Usuário" required/>
+								<label class="label">usuário ou email:</label>
+								<input class="input" type="text" name="login" placeholder="example@example.com" required/>
 							</div>
 							<br>
 							<div>
 								<label class="label">senha:</label>
-								<input class="input" type="password" name="pass" required/>
+								<input class="input" type="password" name="pass" placeholder="*******" required/>
 							</div>
 
 							</br>

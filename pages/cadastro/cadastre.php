@@ -64,56 +64,56 @@
 			<div class="hero-body">
 
 				<div class="container">
+					<section class="content">
 
-					<form class="form" action="../../scripts/php/register/user_register.php" method="post">
-
-						<img src="../../assets/logo-codex/logo.png" width="100px" alt="" srcset="">
-
-					<!-- 	<h1 class="label has-text-centered">Cadastre - se</h1> -->
-
-						<div>
-							<label class="label">Nome Completo: <span>*</span> </label>
-							<input class="input" type="text" name="nome" required/>
+						<div class="imgBox">
+							<img src="../../assets/svgs/Access_account.svg" alt="" srcset="">
 						</div>
 
-						<div>
-							<label class="label">Usuário: <span>*</span></label>
-							<input class="input" type="text" name="usuario" required/>
-						</div>
+						<div class="conBox">
+							<form class="form" action="../../scripts/php/register/user_register.php" method="post">
+							<!-- 	<h1 class="label has-text-centered">Cadastre - se</h1> -->
+							
+								<div class="field">
+									<!-- <label class="label">Nome Completo: <span>*</span> </label> -->
+									<input class="input" type="text" name="nome" placeholder="Nome Completo" required/>
+								</div>
 
-						<div>
-							<label class="label">E-mail: <span>*</span></label>
-							<input class="input" type="text" name="email" required/>
-						</div>
+								<div class="field">
+									<!-- <label class="label">Usuário: <span>*</span></label> -->
+									<input class="input" type="text" name="usuario" placeholder="Usuário" required/>
+								</div>
 
-						<div>
-							<label class="label">Senha: <span>*</span></label>
-							<input class="input" type="password" name="senha" required/>
-						</div>
+								<div class="field">
+									<!-- <label class="label">E-mail: <span>*</span></label> -->
+									<input class="input" type="text" name="email" placeholder="E-mail" required/>
+								</div>
 
-						<div>
-							<label class="label">Confirmação de senha: <span>*</span></label>
-							<input class="input" type="password" name="confirma_senha" required/>
-						</div>
+								<div class="field">
+									<!-- <label class="label">Senha: <span>*</span></label> -->
+									<input class="input" type="password" name="senha" placeholder="Senha" required/>
+								</div>
 
-						<br>
+								<div class="field">
+									<!-- <label class="label">Confirmação de senha: <span>*</span></label> -->
+									<input class="input" type="password" name="confirma_senha" placeholder="Confirmação de senha" required/>
+								</div>
 
-						<div class="botoes has-text-centered">
-							<input class="button is-success" type="submit" value="Cadastrar"/>
+								<br>
+
+								<div class="botoes has-text-centered">
+									<input class="button" type="submit" value="Cadastrar"/>
+								</div>
+							</form>
 						</div>
 						
-					</form>
+					</section>
 				
 				</div>
 			</div>
 
 		</section>
 	</main>
-	<?php
-	
-		
-	
-	?>
 </body>
 </html>
 
