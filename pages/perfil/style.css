@@ -1,0 +1,70 @@
+@import url("../../theme/global.css");
+
+.label {
+  color: #4b4b4b;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+label {
+  margin: 5px 0;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+}
+
+.conBox {   
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px 10px;
+}
+.conBox .form {
+  width: 70%;
+}
+
+.form input {
+  margin-left: 5px;
+  width: 100%;
+  color: #8734d4;
+  border-bottom: 2px solid #661bad;
+  background-color: transparent;
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-weight: bolder;
+  
+}
+
+.form .button {
+  width: 50%;
+  background-color: #8734d4;
+  color: #fff;
+  border-bottom: none;
+  transition: 0.5s;
+}
+
+.botoes {
+  width: 350px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.form .button:hover {
+  border-radius: 10px 5px;
+  background-color: #8b52c0;
+}

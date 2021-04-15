@@ -1,4 +1,21 @@
-<?php session_start(); ?>
+<?php 
+  require_once "../../scripts/banco/conexao.php";
+  session_start(); 
+  if(isset($_SESSION['username'])){
+
+    $sql = $conn -> query("SELECT id_usuario, tipo_usuario, senha, nome, email FROM usuarios WHERE nick ='$_SESSION[username]'");
+
+    $dados = mysqli_fetch_array($sql);
+
+    $nome = explode(' ', $dados['nome']);
+    $_SESSION['id_usuario'] = $dados['id_usuario'];
+    $_SESSION['tp_usuario'] = $dados['tipo_usuario'];
+    
+
+  }else{
+      echo "Faça login para acessar essa página!";exit;
+  }
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,21 +26,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
     <link rel="stylesheet" href="style.css">
-
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
 
-    <title>Codex - Coding Experience</title>
+    <title>Meu Perfil</title>
 </head>
 <body>
-    <main>
+      <main>
         <section class="hero is-fullheight">
             <!-- HERO HEAD -->
             <div class="hero-head">
                 <header class="navbar">
                     <div class="container">
                         <div class="navbar-brand">
-                            <a class="navbar-item" href="index.php">
+                            <a class="navbar-item" href="../../index.php">
                                 <p class="title title-codex">
                                     CODEX
                                 </p>
@@ -39,7 +56,7 @@
                         <!-- Default menu -->
                         <div id="navbarMenuHeroC" class="navbar-menu">
                             <div class="navbar-end">
-                                <a class="navbar-item" href="#">
+                                <a class="navbar-item" href="../../index.php">
                                     Página inicial
                                 </a>
                                 <a class="navbar-item" href="pages/login/login.php" id = "login">
@@ -48,7 +65,7 @@
                                 <a class="navbar-item" href="pages/cadastro/cadastre.php" id = "register">
                                     Cadastre-se
                                 </a>
-                                <a class="navbar-item" href="pages/sobre-nos/sobre-nos.php">
+                                <a class="navbar-item" href="../pages/sobre-nos/sobre-nos.php">
                                     Sobre nós
                                 </a>
                                 <!-- botao para download -->
@@ -58,24 +75,9 @@
                                     </a>
                                 </span>
 
-                                <p id="profile" class="navbar-item" style="color: #fff; font-size: 12pt; cursor: pointer;">
-
-                                    <img src="assets/svgs/person_outline_white_24dp.svg"/>
-                                    
-                                    <?php
-                                        if(isset($_SESSION['username'])) {
-                                            echo "
-                                            <span style='margin: 5px 0 0 4px;'>
-                                                <a href = 'pages/perfil/meu-perfil.php'>$_SESSION[username]</a>
-                                            </span>";
-                                        }
-                                    ?>
-
-                                </p>
-
-                                <a id="logout" class="navbar-item" href="scripts/php/logout/logout.php">
-                                    <img src="assets/svgs/logout_white_24dp.svg">
-                                </a>
+                                <a id="logout" class="navbar-item" href="../../scripts/php/logout/logout.php">
+                                    <img src="../../assets/svgs/logout_white_24dp.svg ">
+                                </a>  
 
                                 <?php 
                                     /* session_start(); */
@@ -90,11 +92,8 @@
                                     }else{
                                         echo '
                                             <script>
-                                                document.querySelector("#profile").style.display = "none";
                                                 document.querySelector("#logout").style.display = "none";
                                                 document.querySelector("#welcome").style.display = "none";
-                                                
-
                                             </script>
                                         ';                                        
                                     }
@@ -108,25 +107,60 @@
 
             <!-- HERO CONTENT -->
 
-            <div class="hero-body is-container">
+            <!-- HERO CONTENT -->
+			      <div class="hero-body">
 
-                <section>
-                    <div class='hero-body left-content'>
-                        <figure>
-                            <img src="assets/svgs/astronauta2.svg" alt="astronauta">
-                        </figure>
-                    </div>
+              <div class="container">
+                <section class="content">
 
-                    <figure>
-                        <img src="assets/logo-codex/logo.png" width="400px">
-                        <h1 class="title">Seja bem vindo ao <span class="pixie-span">CODEX </span><span id="welcome"><?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} ?></span>!</h1>
-                    </figure>
+                  <div class="conBox">
+                    <form class="form" action="#" method="post">
+                     	<h1 class="label has-text-centered">Olá, <?php echo $nome[0]; ?></h1>
+                      <h5 class="label has-text-centered">Aqui você pode atualizar seus dados ou excluir sua conta CODEX:</h5>
+                    
+                      <!-- <div class="field">
+                        <input class="input" type="text" name="nome" placeholder="Nome Completo" value="#" disabled/>
+                      </div> -->
+                      
+                      <div class="field">
+
+                        <label class="label">Usuário: </label>
+                        <input class="input" type="text" name="usuario" placeholder="Usuário" value = "<?php echo $_SESSION['username']?>" disabled/>
+
+                      </div>
+                        
+                      <div class="field">
+
+                        <label class="label">E-mail: </label>
+                        <input class="input" type="text" name="email" placeholder="E-mail" value = "<?php echo $dados['email']?>" disabled/>
+
+                      </div>
+
+                      <div class="field">
+
+                        <label class="label">Senha </label>
+                        <a id="pass" href="../../scripts/php/password/update.php">Alterar Senha</a>
+
+                      </div>
+
+                      <br>
+
+                      <div class="botoes has-text-centered">
+                        <input class="button" type="submit" value="Atualizar dados"/>
+
+                        <a href="../../scripts/php/delete_user/delete.php" class="button-is-danger" id="delete" disabled>Deletar conta</a>
+                      </div>
+
+                      
+
+                    </form>
+                  </div>
                 </section>
-
+              </div>
             </div>
+
 
         </section>
     </main>
- 
 </body>
 </html>
