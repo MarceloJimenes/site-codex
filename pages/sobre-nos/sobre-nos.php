@@ -121,7 +121,7 @@
 				</figure>
 				<h1 style="color:#363636; font-weight:bold; padding:15px 0; font-size:17pt; ">Henrique Cardoso</h1>
 				<p style="text-align:justify; text-indent:15px; font-size:13pt;">Entusiasta de Tecnologia em geral, buscando sempre traçar diferentes maneiras de solucionar problemas.</p>
-				<p style="text-align:justify; font-size:11pt; padding:15px 0;"><strong>Cargo:</strong> CEO - CTO, Full Stack</p>
+				<p style="text-align:justify; font-size:11pt; padding:15px 0;"><strong>Cargo:</strong> CEO - CTO, Mobile & Front-end Developer</p>
 				
 				<div style="display:flex; flex-direction:column; justify-content:space-around;">
 					<a href="https://github.com/HenriqueCardoso-Dev" target="_blank">
