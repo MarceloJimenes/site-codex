@@ -65,7 +65,7 @@
                                 <a class="navbar-item" href="pages/cadastro/cadastre.php" id = "register">
                                     Cadastre-se
                                 </a>
-                                <a class="navbar-item" href="../pages/sobre-nos/sobre-nos.php">
+                                <a class="navbar-item" href="../sobre-nos/sobre-nos.php">
                                     Sobre nós
                                 </a>
                                 <!-- botao para download -->

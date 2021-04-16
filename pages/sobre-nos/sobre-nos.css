@@ -11,3 +11,10 @@
 a.navbar-item {
   color: #fff;
 }
+
+div #perfilBox {
+  border-radius: 20px;
+}
+#perfilName {
+  color: #fff;
+}
