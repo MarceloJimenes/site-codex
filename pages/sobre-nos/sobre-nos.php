@@ -113,7 +113,7 @@
 			</div>
 		</section>
 
-		<section class="hero-body container" style="display: flex; justify-content:space-between;">
+		<section class="hero-body" style="display: flex; justify-content:space-between;">
 		  <!-- Carlos Henrique -->
 			<div class="has-text-centered" style="background: #fff; width:300px; border-radius: 15px; padding:15px;">
 				<figure>
