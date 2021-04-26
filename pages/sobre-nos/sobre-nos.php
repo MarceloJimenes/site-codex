@@ -54,7 +54,6 @@
 			height:100%;
 		}
 		.perfilImage figure {
-			height:180px; 
 			width:180px; 
 			margin:18% 8%;
 		}
