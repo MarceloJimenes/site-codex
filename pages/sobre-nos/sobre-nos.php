@@ -8,11 +8,96 @@
 	<title>Sobre nós</title>
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-	<link rel="stylesheet" href="sobre-nos.css">
+
+	<style>
+		/* General Style */
+		@import url("../../theme/global.css");
+
+		.hero {
+			background-color: #4c0b8a;
+		}
+		.title, .subtitle {
+			color: #fff;
+		}
+		a.navbar-item {
+			color: #fff;
+		}
+
+
+		/* About CODEX */
+		div.boxAbout{
+			display: flex; 
+			align-items: center;
+		}
+		p.about {
+			text-align: justify;
+			text-indent: 20px;
+		}
+
+
+		/* Perfil Cards */
+		.perfilSession {
+			display:grid; 
+			grid-template-columns:1fr 1fr; 
+			grid-template-rows:45vh 50vh;
+		}
+		.perfilCard {
+			display:flex; 
+			background:#fff; 
+			width:520px; 
+			height:250px; 
+			border-radius:29px;
+		}
+		.perfilImage {
+			display:relative; 
+			width:40%; 
+			height:100%;
+		}
+		.perfilImage figure {
+			height:180px; 
+			width:180px; 
+			margin:18% 8%;
+		}
+		.perfilImage figure img {
+			border-radius:50%; 
+			background:#ccc;
+		}
+
+		.perfilContent {
+			width:60%;
+			padding:3% 3%;
+		}
+		.perfilContent .perfilName {
+			color:#363636;
+			font-weight:bold;
+			font-size:20pt;
+			padding-bottom:9px;
+		}
+		.perfilContent .perfilDescription {
+			text-align:justify;
+			padding-bottom:9px;
+		}
+		.perfilContent .perfilOffice {
+			padding-bottom:9px;
+		}
+		.perfilContent .perfilLinks {
+			display:flex;
+			flex-direction:column;
+			justify-content:space-around;
+		}
+		.perfilContent .perfilLinks .link {
+			display:flex;
+			align-items:center;
+		}
+		.perfilContent .perfilLinks .link img {
+			width:25px;
+			margin-right:5px;
+		}
+	</style>
+
 </head>
 
 <body>
-
 	<main>
 		<section class="hero is-fullheight">
 			<div class="hero-head">
@@ -64,32 +149,29 @@
 								</a>
 
 								<?php
-								session_start();
-								if (isset($_SESSION["username"])) {
-									echo '
-													<script>
-															document.querySelector("#login").style.display = "none";
-															document.querySelector("#register").style.display = "none";
-													</script>
-											';
-								} else {
-									echo '
-													<script>
-															document.querySelector("#logout").style.display = "none";
-													</script>
-											';
-								}
-
+									session_start();
+									if (isset($_SESSION["username"])) {
+										echo '
+											<script>
+												document.querySelector("#login").style.display = "none";
+												document.querySelector("#register").style.display = "none";
+											</script>
+										';
+									} else {
+										echo '
+											<script>
+												document.querySelector("#logout").style.display = "none";
+											</script>
+										';
+									}
 								?>
-
 							</div>
 						</div>
 					</div>
 				</header>
 			</div>
 
-			<div class="hero-body container" style="display: flex; align-items: center;">
-
+			<div class="boxAbout hero-body container">
 				<div>
 					<figure>
 						<img src="../../assets/logo-codex/logo.png" width="1000px" alt="Logo da CODEX">
@@ -99,135 +181,144 @@
 				<div class="columns">
 					<div class="column">
 						<p class="title is-3 is-spaced">Quem Somos?</p>
-
-						<p class="subtitle is- 5" style="text-align: justify; text-indent: 20px;">
-							O projeto CODEX tem como objetivo o desenvolvimento de um aplicativo para treinamento e reforço das habilidades de desenvolver códigos em diferentes linguagens de programação.</p>
-
-						<p class="subtitle is- 5" style="text-align: justify; text-indent: 20px;">O framework e funcionalidade do CODEX foi baseado no aplicativo Duolingo, aplicativo para o aprendizado e treito de um novo idioma, onde o usuário deve traduzir uma sentença, seja por meio de escrita ou fala e no final pode passar à um próximo nível.
-							O CODEX funciona de forma parecida, onde o usuário pode começar a aprende
+						<p class="about subtitle is- 5">
+							O projeto CODEX tem como objetivo o desenvolvimento de um aplicativo para treinamento e reforço das habilidades de desenvolver códigos em diferentes linguagens de programação.
 						</p>
-
+						<p class="about subtitle is- 5">
+							O framework e funcionalidade do CODEX foi baseado no aplicativo Duolingo, aplicativo para o aprendizado e treito de um novo idioma, onde o usuário deve traduzir uma sentença, seja por meio de escrita ou fala e no final pode passar à um próximo nível.
+							O CODEX funciona de forma parecida, onde o usuário pode começar a aprende.
+						</p>
 					</div>
-
 				</div>
 			</div>
 		</section>
 
-		<section class="hero-body" style="display: flex; justify-content:space-between;">
-		  <!-- Carlos Henrique -->
-			<div class="has-text-centered" style="background: #fff; width:300px; border-radius: 15px; padding:15px;">
-				<figure>
-					<img src="../../assets/perfil/carlosHenrique.png" alt="Perfil" height="200px" width="200px" style="background:#c5c5c5; border-radius:50%;">
-				</figure>
-				<h1 style="color:#363636; font-weight:bold; padding:15px 0; font-size:17pt; ">Henrique Cardoso</h1>
-				<p style="text-align:justify; text-indent:15px; font-size:13pt;">Entusiasta de Tecnologia em geral, buscando sempre traçar diferentes maneiras de solucionar problemas.</p>
-				<p style="text-align:justify; font-size:11pt; padding:15px 0;"><strong>Cargo:</strong> CEO - CTO, Mobile & Front-end Developer</p>
-				
-				<div style="display:flex; flex-direction:column; justify-content:space-around;">
-					<a href="https://github.com/HenriqueCardoso-Dev" target="_blank">
-						<div style="display:flex; align-items:center;">
-							<figure>
-								<img src="../../assets/svgs/logo-github.svg" alt="GitHub" style="color:#4c0b8a; width:30px; margin-right:5px;">
-							</figure>
-							<p><strong>@HenriqueCardoso-Dev</strong></p>
-						</div>
-					</a>
+		<section class="perfilSession hero-body container">
 
-					<a href="https://www.linkedin.com/in/henriquecardoso-dev/" target="_blank">
-						<div style="display:flex; align-items:center;">
-							<figure>
-								<img src="../../assets/svgs/logo-linkedin.svg" alt="Linkedin" style="width:30px; margin-right:5px;">
-							</figure>
-							<p><strong>@henriquecardoso-dev</strong></p>
-						</div>
-					</a>
+		  				<!-- Carlos Henrique -->
+			<div class="perfilCard">
+				<div class="perfilImage">
+					<figure>
+						<img src="../../assets/perfil/henriqueCardoso.png" alt="Henrique Cardoso">
+					</figure>
+				</div>
+				<div class="perfilContent">
+					<h1 class="perfilName">Henrique Cardoso</h1>
+					<p class="perfilDescription">Entusiasta de Tecnologia em geral, buscando sempre traçar diferentes maneiras de solucionar problemas.</p>
+					<p class="perfilOffice"><strong>Cargo:</strong> CEO - CTO, Full Stack Developer</p>
 
+					<div class="perfilLinks">
+						<a href="https://github.com/HenriqueCardoso-Dev" target="_blank">
+							<div class="link">
+								<figure>
+									<img src="../../assets/svgs/logo-github.svg" alt="GitHub">
+								</figure>
+								<p><strong>@HenriqueCardoso-Dev</strong></p>
+							</div>
+						</a>
+						<a href="https://www.linkedin.com/in/henriquecardoso-dev/" target="_blank">
+							<div class="link">
+								<figure>
+									<img src="../../assets/svgs/logo-linkedin.svg" alt="Linkedin">
+								</figure>
+								<p><strong>@henriquecardoso-dev</strong></p>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
+
 								<!-- Kauã Santos -->
-			<div class="has-text-centered" style="background: #fff; width:300px; border-radius: 15px; padding:15px;">
-				<figure>
-					<img src="../../assets/perfil/kauaSantos.png" alt="Perfil" height="200px" width="200px" style="background:#c5c5c5; border-radius:50%;">
-				</figure>
-				<h1 style="color:#363636; font-weight:bold; padding:15px 0; font-size:17pt; ">Kauã Santos</h1>
-				<p style="text-align:justify; text-indent:15px; font-size:13pt;">Estudante em Desenvolvimento de Sistemas, interessado pelas linguagens e modalidades da tecnologia.</p>
-				<p style="text-align:justify; font-size:11pt; padding:15px 0;"><strong>Cargo:</strong> Front-end Developer</p>
-				
-				<div style="display:flex; flex-direction:column; justify-content:space-around;">
-					<a href="https://github.com/kauassilva" target="_blank">
-						<div style="display:flex; align-items:center;">
-							<figure>
-								<img src="../../assets/svgs/logo-github.svg" alt="GitHub" style="color:#4c0b8a; width:30px; margin-right:5px;">
-							</figure>
-							<p><strong>@kauassilva</strong></p>
-						</div>
-					</a>
+			<div class="perfilCard">
+				<div class="perfilImage">
+					<figure>
+						<img src="../../assets/perfil/kauaSantos.png" alt="Kauã Santos">
+					</figure>	
+				</div>
+				<div class="perfilContent">
+					<h1 class="perfilName">Kauã Santos</h1>
+					<p class="perfilDescription">Estudante em Desenvolvimento de Sistemas, interessado pelas linguagens e modalidades da tecnologia.</p>
+					<p class="perfilOffice"><strong>Cargo:</strong> Front-end Developer</p>
 
-					<a href="https://www.linkedin.com/in/kaua-santos" target="_blank">
-						<div style="display:flex; align-items:center;">
-							<figure>
-								<img src="../../assets/svgs/logo-linkedin.svg" alt="Linkedin" style="width:30px; margin-right:5px;">
-							</figure>
-							<p><strong>@kaua-santos</strong></p>
-						</div>
-					</a>
-
+					<div class="perfilLinks">
+						<a href="https://github.com/kauassilva" target="_blank">
+							<div class="link">
+								<figure>
+									<img src="../../assets/svgs/logo-github.svg" alt="GitHub">
+								</figure>
+								<p><strong>@kauassilva</strong></p>
+							</div>
+						</a>
+						<a href="https://www.linkedin.com/in/kaua-santos" target="_blank">
+							<div class="link">
+								<figure>
+									<img src="../../assets/svgs/logo-linkedin.svg" alt="Linkedin">
+								</figure>
+								<p><strong>@kaua-santos</strong></p>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
+
 								<!-- Marcelo Jimenes -->
-			<div class="has-text-centered" style="background: #fff; width:300px; border-radius: 15px; padding:15px;">
-				<figure>
-					<img src="../../assets/perfil/marceloJimenes.jpg" alt="Perfil" height="200px" width="200px" style="background:#c5c5c5; border-radius:50%;">
-				</figure>
-				<h1 style="color:#363636; font-weight:bold; padding:15px 0; font-size:17pt; ">Marcelo Jimenes</h1>
-				<p style="text-align:justify; text-indent:15px; font-size:13pt;">Fã de desenvolvimento de aplicações voltados ao Back-end, leitor ávido, entusiasta da música e gamer.</p>
-				<p style="text-align:justify; font-size:11pt; padding:15px 0;"><strong>Cargo:</strong> Back-end Developer</p>
-				
-				<div style="display:flex; flex-direction:column; justify-content:space-around;">
-					<a href="https://github.com/MarceloJimenes" target="_blank">
-						<div style="display:flex; align-items:center;">
-							<figure>
-								<img src="../../assets/svgs/logo-github.svg" alt="GitHub" style="color:#4c0b8a; width:30px; margin-right:5px;">
-							</figure>
-							<p><strong>@MarceloJimenes</strong></p>
-						</div>
-					</a>
+			<div class="perfilCard">
+				<div class="perfilImage">
+					<figure>
+						<img src="../../assets/perfil/marceloJimenes.jpg" alt="Marcelo Jimenes">
+					</figure>	
+				</div>
+				<div class="perfilContent">
+					<h1 class="perfilName">Marcelo Jimenes</h1>
+					<p class="perfilDescription">Fã de desenvolvimento de aplicações voltados ao Back-end, leitor ávido, entusiasta da música e gamer.</p>
+					<p class="perfilOffice"><strong>Cargo:</strong> Back-end Developer</p>
 
-					<a href="https://www.linkedin.com/in/marcelo-jimenes/" target="_blank">
-						<div style="display:flex; align-items:center;">
-							<figure>
-								<img src="../../assets/svgs/logo-linkedin.svg" alt="Linkedin" style="width:30px; margin-right:5px;">
-							</figure>
-							<p><strong>@marcelo-jimenes</strong></p>
-						</div>
-					</a>
-
+					<div class="perfilLinks">
+						<a href="https://github.com/MarceloJimenes" target="_blank">
+							<div class="link">
+								<figure>
+									<img src="../../assets/svgs/logo-github.svg" alt="GitHub">
+								</figure>
+								<p><strong>@MarceloJimenes</strong></p>
+							</div>
+						</a>
+						<a href="https://www.linkedin.com/in/marcelo-jimenes/" target="_blank">
+							<div class="link">
+								<figure>
+									<img src="../../assets/svgs/logo-linkedin.svg" alt="Linkedin">
+								</figure>
+								<p><strong>@marcelo-jimenes</strong></p>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
+								
 								<!-- Rafael Cordeiro -->
-			<div class="has-text-centered" style="background: #fff; width:300px; border-radius: 15px; padding:15px;">
-				<figure>
-					<img src="../../assets/perfil/rafaelCordeiro.png" alt="Perfil" height="200px" width="200px" style="background:#c5c5c5; border-radius:50%;">
-				</figure>
-				<h1 style="color:#363636; font-weight:bold; padding:15px 0; font-size:17pt; ">Rafael Cordeiro</h1>
-				<p style="text-align:justify; text-indent:15px; font-size:13pt;">Estudante de desenvolvimento de sistemas, formado em administração, capacitado para gestão de empresas.</p>
-				<p style="text-align:justify; font-size:11pt; padding:15px 0;"><strong>Cargo:</strong> Redator</p>
-				
-				<div style="display:flex; flex-direction:column; justify-content:space-around;">
-					<a href="https://github.com/RCordeiroAlmeida" target="_blank">
-						<div style="display:flex; align-items:center;">
-							<figure>
-								<img src="../../assets/svgs/logo-github.svg" alt="GitHub" style="color:#4c0b8a; width:30px; margin-right:5px;">
-							</figure>
-							<p><strong>@RCordeiroAlmeida</strong></p>
-						</div>
-					</a>
+			<div class="perfilCard">
+				<div class="perfilImage">
+					<figure>
+						<img src="../../assets/perfil/rafaelCordeiro.png" alt="Rafael Cordeiro">
+					</figure>	
+				</div>
+				<div class="perfilContent">
+					<h1 class="perfilName">Rafael Cordeiro</h1>
+					<p class="perfilDescription">Estudante de desenvolvimento de sistemas, formado em administração, capacitado para gestão de empresas.</p>
+					<p class="perfilOffice"><strong>Cargo:</strong> Redator</p>
 
+					<div class="perfilLinks">
+						<a href="https://github.com/RCordeiroAlmeidas" target="_blank">
+							<div class="link">
+								<figure>
+									<img src="../../assets/svgs/logo-github.svg" alt="GitHub">
+								</figure>
+								<p><strong>@RCordeiroAlmeida</strong></p>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
 	</main>
-
 </body>
-
 </html>
