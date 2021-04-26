@@ -45,6 +45,7 @@
 			display:flex; 
 			background:#fff; 
 			width:520px; 
+			height:260px; 
 			border-radius:29px;
 		}
 		.perfilImage {
