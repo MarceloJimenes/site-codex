@@ -13,9 +13,6 @@
 		/* General Style */
 		@import url("../../theme/global.css");
 
-		body {
-			max-width: 1366px;
-		}
 		.hero {
 			background-color: #4c0b8a;
 		}
@@ -24,6 +21,9 @@
 		}
 		a.navbar-item {
 			color: #fff;
+		}
+		.container {
+			padding: 0;
 		}
 
 
@@ -42,9 +42,9 @@
 		.perfilSession {
 			display:grid; 
 			grid-template-columns:1fr 1fr;
-			
-			/* margin:25px auto; */
-			/* gap:45px 0; */
+			max-width: 1366px;
+			margin:25px auto;
+			gap:0 45px;
 		}
 		.perfilCard {
 			display:flex; 
@@ -199,7 +199,7 @@
 			</div>
 		</section>
 
-		<section class="perfilSession hero-body">
+		<section class="perfilSession hero-body container">
 
 		  				<!-- Carlos Henrique -->
 			<div class="perfilCard">
