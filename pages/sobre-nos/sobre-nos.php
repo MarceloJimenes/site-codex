@@ -238,7 +238,7 @@
 				</div>
 				<div class="perfilContent">
 					<h1 class="perfilName">Kauã Santos</h1>
-					<p class="perfilDescription">Estudante em Desenvolvimento de Sistemas, interessado pelas linguagens e modalidades da tecnologia.</p>
+					<p class="perfilDescription">Estudante em Desenvolvimento de Sistemas, interessado pelas linguagens da tecnologia.</p>
 					<p class="perfilOffice"><strong>Cargo:</strong> Front-end Developer</p>
 
 					<div class="perfilLinks">
