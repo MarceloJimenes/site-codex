@@ -45,13 +45,13 @@
                                 
 								<h5 class="title">Alteração de senha</h5>
 
-								<input class="input" type="password" placeholder="Senha atual"></br>
-								<input class="input" type="password" placeholder="Nova senha"></br>
-								<input class="input" type="password" placeholder="Confirma senha">
+								<input class="input" name="atual" type="password" placeholder="Senha atual"></br>
+								<input class="input" name="nova" type="password" placeholder="Nova senha"></br>
+								<input class="input" name="confirma" type="password" placeholder="Confirma senha">
 
 								</br>
 
-								<input class="button botao" type="submit" value="Confirmar Senha"/>
+								<input class="button botao" id="alterar" type="submit" value="Alterar" />
 							</form>
 						</div>
 					</div>
@@ -184,6 +184,35 @@
             </div>
         </section>
     </main>
+    <?php
+      if (isset($_POST['atual']) && isset($_POST['nova']) && isset($_POST['confirma'])) {
+
+        require_once "update_pass.php";
+
+        if (validPass($_POST['atual'],$conn)) {
+          echo"
+            <script>
+              alert('A senha atual está errada');
+              history.back(); 
+            </script>
+          ";
+        }elseif(checkNewPass($_POST['nova'],$_POST['confirma'],$conn)){
+          echo"
+            <script>
+              alert('As senhas não conferem! Lembrete: sua senha não pode ultrapassar 40 caracteres.');
+              history.back();
+            </script>
+          ";
+        }else{
+          echo "
+          <script>
+            alert('Senha alterada com sucesso.');
+            history.back();
+          </script>
+          ";
+        }
+      }
+    ?>
 		<!-- Javascript -->
 		<script>
 			function modalOn() {
