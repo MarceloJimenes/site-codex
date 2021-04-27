@@ -13,6 +13,9 @@
 		/* General Style */
 		@import url("../../theme/global.css");
 
+		body {
+			max-width: 1366px;
+		}
 		.hero {
 			background-color: #4c0b8a;
 		}
@@ -39,13 +42,16 @@
 		.perfilSession {
 			display:grid; 
 			grid-template-columns:1fr 1fr;
+			
+			/* margin:25px auto; */
+			/* gap:45px 0; */
 		}
 		.perfilCard {
 			display:flex; 
 			background:#fff; 
 			width:540px; 
 			border-radius:29px;
-			margin:25px auto;
+			margin:35px auto;
 		}
 		.perfilImage {
 			display:relative; 
