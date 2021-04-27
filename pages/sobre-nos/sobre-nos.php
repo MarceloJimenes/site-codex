@@ -44,7 +44,7 @@
 		.perfilCard {
 			display:flex; 
 			background:#fff; 
-			width:520px; 
+			width:540px; 
 			/* height:260px;  */
 			border-radius:29px;
 			margin:25px;
@@ -240,7 +240,7 @@
 				<div class="perfilContent">
 					<h1 class="perfilName">Kauã Santos</h1>
 					<p class="perfilDescription">Estudante em Desenvolvimento de Sistemas, interessado pelas linguagens da tecnologia.</p>
-					<p class="perfilOffice"><strong>Cargo:</strong> Front-end Developer</p>
+					<p class="perfilOffice"><strong>Cargo:</strong> Front-end Developer & Designer</p>
 
 					<div class="perfilLinks">
 						<a href="https://github.com/kauassilva" target="_blank">
