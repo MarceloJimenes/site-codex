@@ -45,7 +45,7 @@
 			display:flex; 
 			background:#fff; 
 			width:520px; 
-			height:260px; 
+			/* height:260px;  */
 			border-radius:29px;
 			margin:25px;
 		}
@@ -84,7 +84,7 @@
 			display:flex;
 			flex-direction:column;
 			justify-content:space-around;
-			padding:0 0 10px 0;
+			padding-bottom:10px;
 		}
 		.perfilContent .perfilLinks .link {
 			display:flex;
