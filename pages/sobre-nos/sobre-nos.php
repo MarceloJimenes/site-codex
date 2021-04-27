@@ -38,16 +38,14 @@
 		/* Perfil Cards */
 		.perfilSession {
 			display:grid; 
-			grid-template-columns:1fr 1fr; 
-			/* grid-template-rows:45vh 50vh; */
+			grid-template-columns:1fr 1fr;
 		}
 		.perfilCard {
 			display:flex; 
 			background:#fff; 
 			width:540px; 
-			/* height:260px;  */
 			border-radius:29px;
-			margin:25px;
+			margin:25px auto;
 		}
 		.perfilImage {
 			display:relative; 
@@ -195,7 +193,7 @@
 			</div>
 		</section>
 
-		<section class="perfilSession hero-body container">
+		<section class="perfilSession hero-body">
 
 		  				<!-- Carlos Henrique -->
 			<div class="perfilCard">
