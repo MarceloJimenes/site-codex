@@ -13,7 +13,7 @@
 		/* General Style */
 		@import url("../../theme/global.css");
 
-		.hero {
+		html, .hero {
 			background-color: #4c0b8a;
 		}
 		.title, .subtitle {
