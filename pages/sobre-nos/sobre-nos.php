@@ -39,7 +39,7 @@
 		.perfilSession {
 			display:grid; 
 			grid-template-columns:1fr 1fr; 
-			grid-template-rows:45vh 50vh;
+			/* grid-template-rows:45vh 50vh; */
 		}
 		.perfilCard {
 			display:flex; 
@@ -47,6 +47,7 @@
 			width:520px; 
 			height:260px; 
 			border-radius:29px;
+			margin:25px;
 		}
 		.perfilImage {
 			display:relative; 
