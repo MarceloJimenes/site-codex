@@ -24,19 +24,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-
     <link rel="stylesheet" href="style.css">
-    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
-
+		
     <title>Meu Perfil</title>
 </head>
 <body>
       <main>
         <section class="hero is-fullheight">
+					<!-- The Modal -->
+					<div id="myModal" class='modal-container'>
+
+						<!-- Modal content -->
+						<div class="modal-content">
+							<span id="bt_close">&times;</span>
+							<form class="update-pass">
+								<h5 class="title">Alteração de senha</h5>
+
+								<input class="input" type="password" placeholder="Senha atual"></br>
+								<input class="input" type="password" placeholder="Nova senha"></br>
+								<input class="input" type="password" placeholder="Confirma senha">
+
+								</br>
+
+								<input class="button" type="submit" value="Confirmar Senha"/>
+							</form>
+						</div>
+					</div>
+
             <!-- HERO HEAD -->
-            <div class="hero-head">
+            <div class="hero-head" id="nav-bar">
                 <header class="navbar">
                     <div class="container">
                         <div class="navbar-brand">
@@ -109,8 +127,9 @@
 
             <!-- HERO CONTENT -->
 			      <div class="hero-body">
-
+							
               <div class="container">
+							
                 <section class="content">
 
                   <div class="conBox">
@@ -139,28 +158,35 @@
                       <div class="field">
 
                         <label class="label">Senha </label>
-                        <a id="pass" href="../../scripts/php/password/update.php">Alterar Senha</a>
+
+												<!-- Trigger/Open The Modal -->
+												<a id="myBtn" onclick="modalOn()">Alterar Senha</a>
 
                       </div>
 
                       <br>
 
                       <div class="botoes has-text-centered">
+
                         <input class="button" type="submit" value="Atualizar dados"/>
 
                         <a href="../../scripts/php/delete_user/delete.php" class="button-is-danger" id="delete" disabled>Deletar conta</a>
-                      </div>
 
-                      
+                      </div>
 
                     </form>
                   </div>
                 </section>
               </div>
             </div>
-
-
         </section>
     </main>
+		<!-- Javascript -->
+		<script>
+			function modalOn() {
+				document.getElementById('myModal').style.visibility = "visible";
+				document.getElementById('nav-bar').style.display = "none";
+			}
+		</script>
 </body>
 </html>
