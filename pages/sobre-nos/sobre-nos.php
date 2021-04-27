@@ -84,6 +84,7 @@
 			display:flex;
 			flex-direction:column;
 			justify-content:space-around;
+			padding:0 0 10px 0;
 		}
 		.perfilContent .perfilLinks .link {
 			display:flex;
