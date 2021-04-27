@@ -22,6 +22,36 @@
   justify-content: center;
 }
 
+.update-pass {
+  background-color: #fff;
+  padding: 0 50px 50px 50px;
+  border-radius: 5px;
+}
+
+.update-pass img {
+  margin: 0 auto;
+}
+
+.update-pass .input {
+  background-color: #dbdbdb;
+}
+
+.botao {
+  background-color: #8734d4;
+  color: #fff;
+}
+
+.botao:hover {
+  background-color: #9746e2;
+  color: #fff;
+}
+
+.modal-content h5 {
+  color: #4c0b8a;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 #bt_close{
   color: #ffffff;
   position: absolute;

@@ -38,8 +38,11 @@
 
 						<!-- Modal content -->
 						<div class="modal-content">
-							<span id="bt_close">&times;</span>
-							<form class="update-pass">
+							<span id="bt_close" onclick="modalOff()">&times;</span>
+							<form class="update-pass" method="post" action="">
+
+                <img src="../../assets/logo-codex/logo.png" alt="logo codex" width="150px">
+                                
 								<h5 class="title">Alteração de senha</h5>
 
 								<input class="input" type="password" placeholder="Senha atual"></br>
@@ -48,7 +51,7 @@
 
 								</br>
 
-								<input class="button" type="submit" value="Confirmar Senha"/>
+								<input class="button botao" type="submit" value="Confirmar Senha"/>
 							</form>
 						</div>
 					</div>
@@ -185,7 +188,11 @@
 		<script>
 			function modalOn() {
 				document.getElementById('myModal').style.visibility = "visible";
-				document.getElementById('nav-bar').style.display = "none";
+				document.getElementById('nav-bar').style.zIndex = '0';
+			}
+      function modalOff() {
+				document.getElementById('myModal').style.visibility = "hidden";
+				document.getElementById('nav-bar').style.zIndex = '1';
 			}
 		</script>
 </body>
