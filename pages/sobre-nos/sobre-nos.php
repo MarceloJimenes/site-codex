@@ -76,6 +76,7 @@
 		.perfilContent .perfilDescription {
 			text-align:justify;
 			padding-bottom:9px;
+			text-indent: 15px;
 		}
 		.perfilContent .perfilOffice {
 			padding-bottom:9px;
