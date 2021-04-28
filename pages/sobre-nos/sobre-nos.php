@@ -304,7 +304,7 @@
 			<div class="perfilCard">
 				<div class="perfilImage">
 					<figure>
-						<img src="../../assets/perfil/rafaelCordeiro.png" alt="Rafael Cordeiro">
+						<img src="" alt="Rafael Cordeiro">
 					</figure>	
 				</div>
 				<div class="perfilContent">
