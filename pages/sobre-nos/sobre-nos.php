@@ -26,6 +26,7 @@
 			padding: 0;
 		}
 
+		
 
 		/* About CODEX */
 		div.boxAbout{
@@ -304,7 +305,7 @@
 			<div class="perfilCard">
 				<div class="perfilImage">
 					<figure>
-						<img src="" alt="Rafael Cordeiro">
+						<img src="../../assets/perfil/rafaelCordeiro.jpeg" style="width:180px; height:180px; object-fit:cover;" alt="Rafael Cordeiro">
 					</figure>	
 				</div>
 				<div class="perfilContent">
@@ -313,7 +314,7 @@
 					<p class="perfilOffice"><strong>Cargo:</strong> Redator</p>
 
 					<div class="perfilLinks">
-						<a href="https://github.com/RCordeiroAlmeidas" target="_blank">
+						<a href="https://github.com/RCordeiroAlmeida" target="_blank">
 							<div class="link">
 								<figure>
 									<img src="../../assets/svgs/logo-github.svg" alt="GitHub">
