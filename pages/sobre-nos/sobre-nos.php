@@ -305,7 +305,7 @@
 			<div class="perfilCard">
 				<div class="perfilImage">
 					<figure>
-						<img src="../../assets/perfil/rafaelCordeiro.jpeg" style="width:180px; height:180px; object-fit:cover;" alt="Rafael Cordeiro">
+						<img src="../../assets/perfil/rafaelCordeiro.jpeg" alt="Rafael Cordeiro">
 					</figure>	
 				</div>
 				<div class="perfilContent">
