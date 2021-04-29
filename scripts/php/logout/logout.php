@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
 
   <!-- SweetAlert DarkTheme -->
   <link rel="stylesheet" href="../../../node_modules/@sweetalert2/theme-dark/dark.css">
-	<script src="../../../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+  <script src="../../../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
 
   <title>Document</title>
 </head>
+
 <body>
   <?php
   
@@ -21,14 +23,14 @@
   
     <script>
     
-      setTimeout(function(){ location.href = '../../../index.php'; }, 3000);
+      setTimeout(function(){ location.href = '../../../index.php'; }, 2000);
 
       Swal.fire({
         icon: 'success',
         title: 'Adeus...&#128532;',
         footer: 'A comunidade já está sentindo sua falta, volte assim que possível',
         showConfirmButton: false,
-        timer: 3000
+        timer: 2000
       })
 
     </script>
@@ -37,4 +39,5 @@
 
   ?>
 </body>
+
 </html>

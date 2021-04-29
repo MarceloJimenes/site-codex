@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro de Usuário</title>
 </head>
+
 <body>
   <?php
     //var_dump($_POST);
@@ -36,9 +38,21 @@
         $sql = $conn -> query("INSERT INTO usuarios (tipo_usuario, nick, senha, nome, email, origem) VALUES('0', '$user', '$pass', '$nome', '$email' , 'c')");
 
         if ($sql==1) {
-          echo "
-            Cadastrado com sucesso!
-          ";
+          $sql = $conn -> query ("select * from usuarios where email='".$email."' and senha='".$pass."'");
+
+          $linesCounter = mysqli_num_rows($sql);
+          
+          if($linesCounter == 1) {
+            $data = $sql -> fetch_assoc();
+            session_start();
+            $_SESSION['username'] = $data['nick'];
+            
+            echo"
+              <script>
+                location.href = '../../../index.php';
+              </script>
+            ";
+          }
         }else{
           echo "
             ERRO
@@ -50,4 +64,5 @@
     }
   ?>
 </body>
+
 </html>
