@@ -45,9 +45,9 @@
                                 
 								<h5 class="title">Alteração de senha</h5>
 
-								<input class="input" name="atual" type="password" placeholder="Senha atual"></br>
-								<input class="input" name="nova" type="password" placeholder="Nova senha"></br>
-								<input class="input" name="confirma" type="password" placeholder="Confirma senha">
+								<input class="input" name="atual" type="text" placeholder="Senha atual"></br>
+								<input class="input" name="nova" type="text" placeholder="Nova senha"></br>
+								<input class="input" name="confirma" type="text" placeholder="Confirma senha">
 
 								</br>
 
@@ -185,10 +185,12 @@
         </section>
     </main>
     <?php
+      require_once "update_pass.php";
       if (isset($_POST['atual']) && isset($_POST['nova']) && isset($_POST['confirma'])) {
 
-        require_once "update_pass.php";
-
+        
+        
+        // print_r($_POST);exit;
         if (validPass($_POST['atual'],$conn)) {
           echo"
             <script>
@@ -200,9 +202,9 @@
           echo"
             <script>
               alert('As senhas não conferem! Lembrete: sua senha não pode ultrapassar 40 caracteres.');
-              history.back();
-            </script>
-          ";
+               history.back();
+             </script>
+           ";
         }else{
           echo "
           <script>

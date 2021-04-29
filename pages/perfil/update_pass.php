@@ -8,11 +8,22 @@
 
   if (isset($atual) && isset($nova) && isset($confirma)) { */
     function validPass($atual,$conn){
+      // echo $atual;exit;
       $sql = $conn -> query("SELECT senha FROM usuarios WHERE id_usuario='$_SESSION[id_usuario]'");
       $senha = $sql -> fetch_assoc();
+      // print_r($senha);exit;
+      // echo $senha;exit;
     
-      if (sha1($atual) != $senha){
+      // echo sha1($atual);
+      // echo '<br>';
+      // echo "Banco: ".$senha['senha'];
+      // exit;
+      if (sha1($atual) != $senha['senha']){
+        // echo 'Kauã';exit;
         return true;
+      } 
+      else {
+        return false;
       }
     }
 
@@ -20,10 +31,14 @@
       if ($nova != $confirma || strlen($nova)>40 || strlen($confirma)>40) {
         return true;
       }
+      else { 
 
       $insert = $conn -> query("UPDATE usuarios SET senha='".sha1($confirma)."' WHERE id_usuario='$_SESSION[id_usuario]'");
       if ($insert == 1) {
+        return false;
+      } else {
         return true;
-      } return false;
+      }
+    }
     }
 ?>  
