@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'pro-pixie';
-  src: url(../fonts/ProcrastinatingPixie-WyVOO.ttf) format('truetype');
+  src: local(pro-pixie), url(../fonts/ProcrastinatingPixie-WyVOO.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
