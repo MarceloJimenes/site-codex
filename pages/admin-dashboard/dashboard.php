@@ -14,33 +14,37 @@
     <div class="menu">
       <h1 class="logo"><span>CODEX</span> Admin</h1>
 
-      <div class="linksBox">
-        <p class="topics">Cadastrar</p>
-        <p class="links"><a href="#">Cadastrar Linguagens</p></a>
-        <p class="links"><a href="#">Cadastrar Aulas</p></a>
-        <p class="links"><a href="#">Cadastrar Exercícios</p></a>
-        <p class="links"><a href="#">Cadastrar Aulas</p></a>
+      <div class="boxLinks">
+        <p class="linkTopic">Cadastrar</p>
+        <p class="link"><a href="#">Cadastrar Linguagens</p></a>
+        <p class="link"><a href="#">Cadastrar Aulas</p></a>
+        <p class="link"><a href="#">Cadastrar Exercícios</p></a>
+        <p class="link"><a href="#">Cadastrar Alternativas</p></a>
       </div>
 
-      <div class="linksBox">
-        <p class="topics">Alterar</p>
-        <p class="links"><a href="#">Alterar Linguagens</p></a>
-        <p class="links"><a href="#">Alterar Aulas</p></a>
-        <p class="links"><a href="#">Alterar Exercícios</p></a>
-        <p class="links"><a href="#">Alterar Aulas</p></a>
+      <div class="boxLinks">
+        <p class="linkTopic">Atualizar</p>
+        <p class="link"><a href="#">Atualizar Linguagens</p></a>
+        <p class="link"><a href="#">Atualizar Aulas</p></a>
+        <p class="link"><a href="#">Atualizar Exercícios</p></a>
+        <p class="link"><a href="#">Atualizar Alternativas</p></a>
       </div>
 
-      <div class="linksBox">
-        <p class="topics">Remover</p>
-        <p class="links"><a href="#">Remover Linguagens</p></a>
-        <p class="links"><a href="#">Remover Aulas</p></a>
-        <p class="links"><a href="#">Remover Exercícios</p></a>
-        <p class="links"><a href="#">Remover Aulas</p></a>
+      <div class="boxLinks">
+        <p class="linkTopic">Remover</p>
+        <p class="link"><a href="#">Remover Linguagens</p></a>
+        <p class="link"><a href="#">Remover Aulas</p></a>
+        <p class="link"><a href="#">Remover Exercícios</p></a>
+        <p class="link"><a href="#">Remover Alternativas</p></a>
       </div>
 
     </div>
+
     <div class="content">
-      
+      <!--
+        Colocar dados do CODEX... Tipo "Quantas linguagens cadastradas,..."
+        Se possível colocar gráficos ou algo interessante e que seja útil
+      -->
     </div>
   </section>
 </body>
