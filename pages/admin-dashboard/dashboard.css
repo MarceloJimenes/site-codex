@@ -11,7 +11,7 @@
 section {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 100vh;
+  grid-template-rows: 100%;
   grid-template-areas: "menu content";
 }
 .menu {
@@ -36,25 +36,29 @@ section {
   margin-bottom:57px;
 }
 .logo span{
-  font-family: pro-pixie, arial;
+  font-family: pro-pixie, Arial;
   font-weight: 700;
 }
 
-.linksBox {
-  margin: 0 40px 30px;
-  font-family: arial;
+.boxLinks {
+  margin-left: 40px;
+  margin-bottom: 30px;
+  font-family: Arial;
 }
-.topics {
+.linkTopic {
   color: #B5B5B5;
   margin-bottom: 15px;
   font-size: 13pt;
 }
-.links {
+.link {
   margin-left: 15px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
   font-size: 12pt;
 }
-.links a {
+.link a {
   color: #fff;
   text-decoration: none;
 }
+
+/* Content Stylization */
+
