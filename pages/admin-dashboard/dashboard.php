@@ -15,34 +15,52 @@
       <h1 class="logo"><span>CODEX</span> Admin</h1>
 
       <div class="boxLinks">
+        <p class="linkTopic">Painel</p>
+        <p class="link"><a href="dashboard.php">Estatísticas</p></a>
+      </div>
+
+      <div class="boxLinks">
         <p class="linkTopic">Cadastrar</p>
-        <p class="link"><a href="#">Cadastrar Linguagens</p></a>
-        <p class="link"><a href="#">Cadastrar Aulas</p></a>
-        <p class="link"><a href="#">Cadastrar Exercícios</p></a>
-        <p class="link"><a href="#">Cadastrar Alternativas</p></a>
+        <p class="link"><a href="dashboard.php?view=1">Cadastrar Linguagens</p></a>
+        <p class="link"><a href="dashboard.php?view=2">Cadastrar Aulas</p></a>
+        <p class="link"><a href="dashboard.php?view=3">Cadastrar Exercícios</p></a>
+        <p class="link"><a href="dashboard.php?view=4">Cadastrar Alternativas</p></a>
       </div>
 
       <div class="boxLinks">
         <p class="linkTopic">Atualizar</p>
-        <p class="link"><a href="#">Atualizar Linguagens</p></a>
-        <p class="link"><a href="#">Atualizar Aulas</p></a>
-        <p class="link"><a href="#">Atualizar Exercícios</p></a>
-        <p class="link"><a href="#">Atualizar Alternativas</p></a>
+        <p class="link"><a href="dashboard.php?view=5">Atualizar Linguagens</p></a>
+        <p class="link"><a href="dashboard.php?view=6">Atualizar Aulas</p></a>
+        <p class="link"><a href="dashboard.php?view=7">Atualizar Exercícios</p></a>
+        <p class="link"><a href="dashboard.php?view=8">Atualizar Alternativas</p></a>
       </div>
 
       <div class="boxLinks">
         <p class="linkTopic">Remover</p>
-        <p class="link"><a href="#">Remover Linguagens</p></a>
-        <p class="link"><a href="#">Remover Aulas</p></a>
-        <p class="link"><a href="#">Remover Exercícios</p></a>
-        <p class="link"><a href="#">Remover Alternativas</p></a>
+        <p class="link"><a href="dashboard.php?view=9">Remover Linguagens</p></a>
+        <p class="link"><a href="dashboard.php?view=10">Remover Aulas</p></a>
+        <p class="link"><a href="dashboard.php?view=11">Remover Exercícios</p></a>
+        <p class="link"><a href="dashboard.php?view=12">Remover Alternativas</p></a>
       </div>
 
     </div>
 
     <div class="content">
       <?php
-        include ("test.html");
+        if(isset($_GET['view'])) {
+
+      
+          $view = $_GET['view'];
+          require_once "../../scripts/php/selectRoute/SelectRoute.php";
+      
+      
+          $dir = getRequest($view);
+
+          include ("views/$dir");
+      
+        } else {
+          include ("views/statistics.php");
+        }
       ?>
     </div>
   </section>

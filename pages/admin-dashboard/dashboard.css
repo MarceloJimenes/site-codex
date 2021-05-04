@@ -22,6 +22,7 @@ section {
 .content {
   grid-area: content;
   background: #4C0B8A;
+  padding: 50px;
 }
 
 /* Menu Stylization */
