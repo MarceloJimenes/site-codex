@@ -74,10 +74,8 @@
                   </a>
                 </span>
 
-
-
-                <a id="logout" class="assetsLink" href="scripts/php/logout/logout.php">
-                  <img src="assets/svgs/logout_white_24dp.svg">
+                <a class="assetsLink" href="scripts/php/logout/logout.php" id="logout">
+                  <img src="assets/svgs/logout_white_24dp.svg"/>Sair
                 </a>
 
                 <?php 
@@ -93,11 +91,9 @@
                   }else{
                     echo '
                       <script>
-                        document.querySelector("#profile").style.display = "none";
                         document.querySelector("#logout").style.display = "none";
+                        document.querySelector("#profile").style.display = "none";
                         document.querySelector("#welcome").style.display = "none";
-                          
-
                       </script>
                     ';                                        
                   }

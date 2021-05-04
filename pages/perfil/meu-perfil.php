@@ -195,9 +195,13 @@
                 <div class="botoes has-text-centered">
 
                   <input class="button" type="submit" value="Atualizar dados" />
-
-                  <a href="../../scripts/php/delete_user/delete.php" class="button-is-danger" id="delete"
-                    disabled>Deletar conta</a>
+                  
+                
+                  <a href="../../scripts/php/delete_user/delete.php" class="button-is-danger" id="delete"> 
+                    <button class="button" name="delete" value="<?php echo $dados['id_usuario']?>">
+                      Deletar Conta
+                    </button>
+                  </a>  
 
                 </div>
 
