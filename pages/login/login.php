@@ -141,17 +141,18 @@
 				echo"
 					<script>
 						Swal.fire({
-							position: 'top',
-							toast: 'true',
 							icon: 'error',
 							title: 'Ops!',
 							footer: 'Dados de usuário incorretos ou inexistentes',
 							showConfirmButton: false,
-							timer: 5000
+							timer: 3000
 						})
+
+						setTimeout(function(){history.back()}, 1500);
 					</script>
 				";
       }
+
     }else{
 			/*echo "
 				<script>
