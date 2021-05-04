@@ -41,10 +41,9 @@
     </div>
 
     <div class="content">
-      <!--
-        Colocar dados do CODEX... Tipo "Quantas linguagens cadastradas,..."
-        Se possível colocar gráficos ou algo interessante e que seja útil
-      -->
+      <?php
+        include ("test.html");
+      ?>
     </div>
   </section>
 </body>
