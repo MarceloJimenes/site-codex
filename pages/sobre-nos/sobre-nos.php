@@ -315,7 +315,7 @@
           <h1 class="perfilName">Marcelo Jimenes</h1>
           <p class="perfilDescription">Fã de desenvolvimento de aplicações voltados ao Back-end, leitor ávido,
             entusiasta da música e gamer.</p>
-          <p class="perfilOffice"><strong>Cargo:</strong> Back-end Developer</p>
+          <p class="perfilOffice"><strong>Cargo:</strong> Back-end Developer, Designer</p>
 
           <div class="perfilLinks">
             <a href="https://github.com/MarceloJimenes" target="_blank">
@@ -349,7 +349,7 @@
           <h1 class="perfilName">Rafael Cordeiro</h1>
           <p class="perfilDescription">Estudante de desenvolvimento de sistemas, formado em administração, capacitado
             para gestão de empresas.</p>
-          <p class="perfilOffice"><strong>Cargo:</strong> Front-end Developer</p>
+          <p class="perfilOffice"><strong>Cargo:</strong> Front-end Developer, DBA</p>
 
           <div class="perfilLinks">
             <a href="https://github.com/RCordeiroAlmeida" target="_blank">
