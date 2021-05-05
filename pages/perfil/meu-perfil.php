@@ -1,19 +1,8 @@
 <?php 
   require_once "../../scripts/banco/conexao.php";
   session_start(); 
-  if(isset($_SESSION['username'])){
-
-    $sql = $conn -> query("SELECT id_usuario, tipo_usuario, senha, nome, email FROM usuarios WHERE nick ='$_SESSION[username]'");
-
-    $dados = mysqli_fetch_array($sql);
-
-    $nome = explode(' ', $dados['nome']);
-    $_SESSION['id_usuario'] = $dados['id_usuario'];
-    $_SESSION['tp_usuario'] = $dados['tipo_usuario'];
-    
-
-  }else{
-      echo "Faça login para acessar essa página!";exit;
+  if(!isset($_SESSION['username'])){
+    echo "Faça login para acessar essa página!";exit;
   }
 ?>
 <!DOCTYPE html>
@@ -155,29 +144,37 @@
         <div class="container">
 
           <section class="content">
+          <?php
+            $sql = $conn -> query("SELECT id_usuario, tipo_usuario, senha, nome, email FROM usuarios WHERE nick ='$_SESSION[username]'");
+
+            $dados = mysqli_fetch_array($sql);
+
+            $email = $dados['email'];
+
+            $nome = explode(' ', $dados['nome']);
+            $_SESSION['id_usuario'] = $dados['id_usuario'];
+            $_SESSION['tp_usuario'] = $dados['tipo_usuario'];
+
+          ?>
 
             <div class="conBox">
-              <form class="form" action="#" method="post">
+              <form class="form" action="" method="get">
                 <h1 class="label has-text-centered">Olá, <?php echo $nome[0]; ?></h1>
                 <h5 class="label has-text-centered">Aqui você pode atualizar seus dados ou excluir sua conta CODEX:</h5>
-
-                <!-- <div class="field">
-                        <input class="input" type="text" name="nome" placeholder="Nome Completo" value="#" disabled/>
-                      </div> -->
 
                 <div class="field">
 
                   <label class="label">Usuário: </label>
-                  <input class="input" type="text" name="usuario" placeholder="Usuário"
-                    value="<?php echo $_SESSION['username']?>" disabled />
+                  <input class="input" type="text" name="user" placeholder="Usuário"
+                    value="<?php echo $_SESSION['username']?>" />
 
                 </div>
 
                 <div class="field">
 
                   <label class="label">E-mail: </label>
-                  <input class="input" type="text" name="email" placeholder="E-mail"
-                    value="<?php echo $dados['email']?>" disabled />
+                  <input class="input" type="text" name="mail" placeholder="E-mail"
+                    value="<?php echo $email ?>" />
 
                 </div>
 
@@ -193,20 +190,45 @@
                 <br>
 
                 <div class="botoes has-text-centered">
+                  <button class="button" type="submit" name='update' value="<?php echo $_SESSION['id_usuario']?>">
+                    <strong>Atualizar</strong>
+                  </button>
 
-                  <input class="button" type="submit" value="Atualizar dados" />
-                  
-                
-                  <a href="../../scripts/php/delete_user/delete.php" class="button-is-danger" id="delete"> 
-                    <button class="button" name="delete" value="<?php echo $dados['id_usuario']?>">
-                      Deletar Conta
-                    </button>
-                  </a>  
-
+                  <button class= button type="submit" name="delete" value="<?php echo $_SESSION['id_usuario']?>">
+                    <strong>Deletar conta</strong>
+                  </button>
                 </div>
-
               </form>
             </div>
+
+            <?php
+              #var_dump($_GET);
+              require_once "../../scripts/php/user/control.php";
+              if (isset($_GET['update'])) {
+                if (updateUser($conn,$email)==1) {
+                  echo"
+                    <script>
+                      alert('Dados alterados com sucesso');
+                      location.href='../../index.php';
+                    </script>
+                  ";
+                }
+              }
+
+              if (isset($_GET['delete'])) {
+                if (deleteUser($conn)==1) {
+                  session_destroy();
+                  echo"
+                    <script>
+                      alert('Conta deletada');
+                      location.href='../../index.php';
+                    </script>
+                  ";
+                }
+              }
+              
+            ?>
+
           </section>
         </div>
       </div>
