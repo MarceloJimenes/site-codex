@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+.box {
+  background-color: #331153;
+  height: 100%;
+  padding: 71px 0 19px 0;
+}
+.title {
+  font-size: 24pt;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 71px;
+}
+
+/* form stylization */
+form {
+  display: grid;
+  grid-column: 1fr;
+}
+.field {
+  margin: 0 60px 40px;
+  padding: 10px;
+  color: #591599;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 12pt;
+}
+.button {
+  margin: 0 250px 40px;
+  padding: 10px;
+  color: #591599;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  font-size: 12pt;
+}
+.button:hover {
+  transition: ease 0.3s;
+  background-color: #d3c9dd;
+}
+::-webkit-input-placeholder {
+  color: #591599;
+}
