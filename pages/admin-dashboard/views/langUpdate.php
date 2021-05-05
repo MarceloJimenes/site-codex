@@ -4,11 +4,11 @@
 
   <table class="table">
     <tr>
-      <td>Linguagem</td>
-      <td>Descrição</td>
-      <td>Tipo</td>
-      <td>excluir</td>
-      <td>modificar</td>
+      <th>Linguagem</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th>Excluir</th>
+      <th>Modificar</th>
     </tr>
     <?php
       $sql = $conn -> query ("select * from linguagens");
@@ -20,12 +20,12 @@
             <td>$i[descricao]</td>
             <td>$i[tipo]</td>
             <td>
-              <a href='../../scripts/php/productDelete/index.php?id=$i[id_produto]'>
+              <a href='#'>
                 <img src='../../assets/svgs/delete.svg' class='trash'/>
               </a>
             </td>
             <td>
-              <a href='../../scripts/php/updateProduct/index.php?id=$i[id_produto]'>
+              <a href='#'>
                 <img src='../../assets/svgs/edit.svg' class='edit'/>
               </a>
             </td>

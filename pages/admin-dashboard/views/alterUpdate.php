@@ -4,13 +4,13 @@
 
   <table class="table">
     <tr>
-      <td>Linguagem</td>
-      <td>Aula</td>
-      <td>Exercício</td>
-      <td>Alternativa</td>
-      <td>Tipo</td>
-      <td>excluir</td>
-      <td>modificar</td>
+      <th>Linguagem</th>
+      <th>Aula</th>
+      <th>Exercício</th>
+      <th>Alternativa</th>
+      <th>Tipo</th>
+      <th>excluir</th>
+      <th>modificar</th>
     </tr>
     <?php
       $sql = $conn -> query 
@@ -37,7 +37,7 @@
             <td>$i[nome]</td>
             <td>$i[tt_aula]</td>
             <td>$i[tt_exercicio]</td>
-            <td>$i[ds_alternativa]</td>
+            <td><abbr title='$i[ds_alternativa]'>".mb_strimwidth($i['ds_alternativa'], 0, 50, '...')."</abbr></td>
             <td>$altertype</td>
             <td>
               <a href=''>

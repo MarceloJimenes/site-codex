@@ -4,12 +4,12 @@
 
   <table class="table">
     <tr>
-      <td>Linguagem</td>
-      <td>Aula</td>
-      <td>Exercício</td>
-      <td>Enunciado</td>
-      <td>excluir</td>
-      <td>modificar</td>
+      <th>Linguagem</th>
+      <th>Aula</th>
+      <th>Exercício</th>
+      <th>Enunciado</th>
+      <th>Excluir</th>
+      <th>Modificar</th>
     </tr>
     <?php
       $sql = $conn -> query 
@@ -28,14 +28,14 @@
             <td>$i[nome]</td>
             <td>$i[tt_aula]</td>
             <td>$i[tt_exercicio]</td>
-            <td>$i[ds_exercicio]</td>
+            <td><abbr title='$i[ds_exercicio]'>".mb_strimwidth($i['ds_exercicio'], 0, 55, '...')."</abbr></td>
             <td>
-              <a href='../../scripts/php/productDelete/index.php?id=$i[id_produto]'>
+              <a href='#'>
                 <img src='../../assets/svgs/delete.svg' class='trash'/>
               </a>
             </td>
             <td>
-              <a href='../../scripts/php/updateProduct/index.php?id=$i[id_produto]'>
+              <a href='#'>
                 <img src='../../assets/svgs/edit.svg' class='edit'/>
               </a>
             </td>
