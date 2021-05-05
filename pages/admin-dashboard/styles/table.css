@@ -1,0 +1,41 @@
+*{
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  text-align: center;
+}
+
+.box-content h1 {
+  color: #fff;
+  margin: 15px;
+}
+
+table {
+  /* border-collapse: collapse; */
+}
+
+table tr:nth-child(odd) {
+  background-color: #cfcfcf;
+}
+
+table tr:nth-child(even) {
+  background-color: #f5f0f0;
+}
+
+tr:nth-child(1) {
+  text-align: justify;
+}
+
+td{
+  padding: 10px 20px;
+  height: 25px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
