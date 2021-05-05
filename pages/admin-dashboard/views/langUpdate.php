@@ -4,28 +4,43 @@
 
   <table class="table">
     <tr>
-      <td>Linguagem</td>
-      <td>Descrição</td>
-      <td>Tipo</td>
-      <td>excluir</td>
-      <td>modificar</td>
+      <th>Linguagem</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th>Excluir</th>
+      <th>Modificar</th>
     </tr>
     <?php
       $sql = $conn -> query ("select * from linguagens");
 
       while($i = $sql -> fetch_array()) {
+
+        switch ($i["tipo"]) {
+          case 'h':
+            $langType = 'Híbrida';
+          break;
+  
+          case 'b':
+            $langType = 'Back-End';
+          break;
+  
+          case 'f':
+            $langType = 'Front-End';
+          break;
+        }
+
         echo "
           <tr>
             <td>$i[nome]</td>
             <td>$i[descricao]</td>
-            <td>$i[tipo]</td>
+            <td>$langType</td>
             <td>
-              <a href='../../scripts/php/productDelete/index.php?id=$i[id_produto]'>
+              <a href='#'>
                 <img src='../../assets/svgs/delete.svg' class='trash'/>
               </a>
             </td>
             <td>
-              <a href='../../scripts/php/updateProduct/index.php?id=$i[id_produto]'>
+              <a href='#'>
                 <img src='../../assets/svgs/edit.svg' class='edit'/>
               </a>
             </td>

@@ -1,4 +1,16 @@
-#teste {
+.box {
+  height: 100%;
+}
+.title {
   font-size: 50pt;
   color: green;
+  padding-top: 71px;
+}
+.text {
+  color: #fff;
+  padding-top: 68px;
+}
+.any {
+  color: #fff;
+  padding-top: 100px;
 }

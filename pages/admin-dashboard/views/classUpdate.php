@@ -4,12 +4,12 @@
 
   <table class="table">
     <tr>
-      <td>Aula</td>
-      <td>Descrição Aula</td>
-      <td>Conteudo</td>
-      <td>Descrição Conteúdo</td>
-      <td>excluir</td>
-      <td>modificar</td>
+      <th>Aula</th>
+      <th>Descrição Aula</th>
+      <th>Conteudo</th>
+      <th>Descrição Conteúdo</th>
+      <th>Excluir</th>
+      <th>Modificar</th>
     </tr>
     <?php
       $sql = $conn -> query ("select * from conteudo");
@@ -19,8 +19,8 @@
           <tr>
             <td>$i[tt_aula]</td>
             <td>$i[ds_aula]</td>
-            <td>$i[tt_conteudo]</td>
-            <td>$i[ds_conteudo]</td>
+            <td><abbr title='$i[tt_conteudo]'>".mb_strimwidth($i['tt_conteudo'], 0, 55, '...')."</abbr></td>
+            <td><abbr title='$i[ds_conteudo]'>".mb_strimwidth($i['ds_conteudo'], 0, 55, '...')."</abbr></td>
             <td>
               <a href='#'>
                 <img src='../../assets/svgs/delete.svg' class='trash'/>
