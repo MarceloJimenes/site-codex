@@ -349,7 +349,7 @@
           <h1 class="perfilName">Rafael Cordeiro</h1>
           <p class="perfilDescription">Estudante de desenvolvimento de sistemas, formado em administração, capacitado
             para gestão de empresas.</p>
-          <p class="perfilOffice"><strong>Cargo:</strong> Redator</p>
+          <p class="perfilOffice"><strong>Cargo:</strong> Front-end Developer</p>
 
           <div class="perfilLinks">
             <a href="https://github.com/RCordeiroAlmeida" target="_blank">

@@ -35,14 +35,6 @@
         <p class="link"><a href="dashboard.php?view=8">Atualizar Alternativas</p></a>
       </div>
 
-      <div class="boxLinks">
-        <p class="linkTopic">Remover</p>
-        <p class="link"><a href="dashboard.php?view=9">Remover Linguagens</p></a>
-        <p class="link"><a href="dashboard.php?view=10">Remover Aulas</p></a>
-        <p class="link"><a href="dashboard.php?view=11">Remover Exercícios</p></a>
-        <p class="link"><a href="dashboard.php?view=12">Remover Alternativas</p></a>
-      </div>
-
     </div>
 
     <div class="content">
