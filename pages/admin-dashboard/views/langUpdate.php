@@ -14,11 +14,26 @@
       $sql = $conn -> query ("select * from linguagens");
 
       while($i = $sql -> fetch_array()) {
+
+        switch ($i["tipo"]) {
+          case 'h':
+            $langType = 'Híbrida';
+          break;
+  
+          case 'b':
+            $langType = 'Back-End';
+          break;
+  
+          case 'f':
+            $langType = 'Front-End';
+          break;
+        }
+
         echo "
           <tr>
             <td>$i[nome]</td>
             <td>$i[descricao]</td>
-            <td>$i[tipo]</td>
+            <td>$langType</td>
             <td>
               <a href='#'>
                 <img src='../../assets/svgs/delete.svg' class='trash'/>
