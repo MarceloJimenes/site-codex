@@ -3,14 +3,54 @@
 
 <!-- Iniciando conteúdo -->
 <div class="box">
-  <h1 class="title">Sugestive Title</h1>
-  <hr>
-  <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita nam quidem est impedit, vitae consectetur cupiditate ut, ex consequatur, nostrum officia assumenda molestiae mollitia possimus atque quas totam repudiandae! A.</p>
-  <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita nam quidem est impedit, vitae consectetur cupiditate ut, ex consequatur, nostrum officia assumenda molestiae mollitia possimus atque quas totam repudiandae! A.</p>
-  <ul class="any">
-    <li>teste 1</li>
-    <li>teste 2</li>
-    <li>teste 3</li>
-    <li>teste 4</li>
-  </ul>
+  <img class="img" src="../../assets/svgs/data-bro.svg" alt="">
+  <h1 class="title">Estatísticas</h1>
+  
+  <section class="grid">
+
+    <div class="boxes">
+      <figure class="icon">
+        <img src="../../assets/svgs/lamp.svg">
+      </figure>
+
+      <div class="information">
+        <h2 class="data">6</h2>
+        <p class="topic">Linguagens</p>
+      </div>
+    </div>
+    
+    <div class="boxes">
+      <figure class="icon">
+        <img src="../../assets/svgs/class.svg">
+      </figure>
+
+      <div class="information">
+        <h2 class="data">6</h2>
+        <p class="topic">Aulas</p>
+      </div>
+    </div>
+
+    <div class="boxes">
+      <figure class="icon">
+        <img src="../../assets/svgs/exercicio.svg">
+      </figure>
+
+      <div class="information">
+        <h2 class="data">6</h2>
+        <p class="topic">Exercícios</p>
+      </div>
+    </div>
+
+    <div class="boxes">
+      <figure class="icon">
+        <img src="../../assets/svgs/setas.svg">
+      </figure>
+
+      <div class="information">
+        <h2 class="data">24</h2>
+        <p class="topic">Alternativas</p>
+      </div>
+    </div>
+
+  </section>
 </div>
