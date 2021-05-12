@@ -43,12 +43,34 @@
 
     <div class="boxes">
       <figure class="icon">
-        <img src="../../assets/svgs/setas.svg">
+        <img src="../../assets/svgs/rule-white.svg">
       </figure>
 
       <div class="information">
         <h2 class="data">24</h2>
         <p class="topic">Alternativas</p>
+      </div>
+    </div>
+
+    <div class="boxes">
+      <figure class="icon">
+        <img src="../../assets/svgs/groups-white.svg">
+      </figure>
+
+      <div class="information">
+        <h2 class="data">0</h2>
+        <p class="topic">Usuários</p>
+      </div>
+    </div>
+
+    <div class="boxes">
+      <figure class="icon">
+        <img src="../../assets/svgs/downloading-white.svg">
+      </figure>
+
+      <div class="information">
+        <h2 class="data">0</h2>
+        <p class="topic">Downloads</p>
       </div>
     </div>
 
