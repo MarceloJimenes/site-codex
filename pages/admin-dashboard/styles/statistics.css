@@ -1,7 +1,8 @@
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* gap: 10px; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 20vh;
+  justify-items: center;
 }
 
 /* general stylization */
@@ -19,7 +20,7 @@
   top: 0;
   width: 100%;
   height: auto;
-  opacity: 0.4;
+  opacity: 0.3;
   margin-top: 40px;
 }
 
