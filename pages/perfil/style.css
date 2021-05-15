@@ -75,25 +75,29 @@ label {
 .content {
   display: flex;
   width: 100%;
-  height: 80vh;
+  height: 100%;
 }
 
 .conBox {   
   display: flex;
   width: 50%;
   height: 100%;
-  justify-content: center;
+  /* justify-content: center; */
+  text-align: center;
   align-items: center;
   background-color: #ffffff;
   border-radius: 10px 10px;
+  padding: 25px 5px;
 }
 .conBox .form {
-  width: 70%;
+  width: 100%;
+  margin: 0 5%;
+
 }
 
 .form input {
   margin-left: 5px;
-  width: 100%;
+  width: 95%;
   color: #8734d4;
   border-bottom: 2px solid #661bad;
   background-color: transparent;
@@ -103,6 +107,10 @@ label {
   border-right: none;
   font-weight: bolder;
   
+}
+
+.inputsField {
+  text-align: start;
 }
 
 .form .button {

@@ -118,8 +118,7 @@
 
           <figure>
             <img src="assets/logo-codex/logo.png" width="400px">
-            <h1 class="title">Seja bem vindo ao <span class="pixie-span">CODEX </span><span
-                id="welcome"><?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} ?></span>!</h1>
+            <h1 class="title">Seja bem vindo ao <span class="pixie-span">CODEX !</h1>
           </figure>
         </section>
 

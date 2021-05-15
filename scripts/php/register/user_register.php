@@ -45,7 +45,11 @@
           if($linesCounter == 1) {
             $data = $sql -> fetch_assoc();
             session_start();
+            $_SESSION['id_usuario'] = $data['id_usuario'];
             $_SESSION['username'] = $data['nick'];
+            $_SESSION['nome'] = $data['nome'];
+            $_SESSION['email'] = $data['email'];
+            $_SESSION['user_type'] = $data['tipo_usuario'];
             
             echo"
               <script>

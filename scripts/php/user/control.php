@@ -7,11 +7,12 @@
 
   }
 
-  function updateUser($conn,$email){
-    $update = $conn -> query("UPDATE usuarios SET nick='$_SESSION[username]', email='$email' WHERE id_usuario=".$_SESSION['id_usuario']);
+  function updateUser($conn,$id,$nome,$nickname,$email){
+    $update = $conn -> query("UPDATE usuarios SET nome='$nome', nick='$nickname', email='$email' WHERE id_usuario=".$id);
     if ($update==1) {
+      $_SESSION['nome'] = $nome;
+      $_SESSION['username'] = $nickname;
+      $_SESSION['email'] = $email;
       return true;
     }
   }
-  
-?>

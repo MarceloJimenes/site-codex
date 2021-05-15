@@ -1,9 +1,11 @@
-<?php 
-  require_once "../../scripts/banco/conexao.php";
-  session_start(); 
-  if(!isset($_SESSION['username'])){
-    echo "Faça login para acessar essa página!";exit;
-  }
+<?php
+require_once "../../scripts/banco/conexao.php";
+session_start();
+//print_r($_SESSION);exit;
+if (!isset($_SESSION['username'])) {
+  echo "Faça login para acessar essa página!";
+  exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -20,21 +22,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
 
   <style>
-  .assetsLink {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    margin-right: 3px;
-  }
+    .assetsLink {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      margin-right: 3px;
+    }
 
-  .assetsLink:nth-child(1) {
-    margin-bottom: 5px;
-  }
+    .assetsLink:nth-child(1) {
+      margin-bottom: 5px;
+    }
 
-  .assetsLink:hover {
-    color: #fff;
-  }
+    .assetsLink:hover {
+      color: #fff;
+    }
   </style>
 
   <title>Meu Perfil</title>
@@ -110,24 +112,22 @@
                   <img src="../../assets/svgs/logout_white_24dp.svg ">
                 </a>
 
-                <?php 
-                  /* session_start(); */
-                  if (isset($_SESSION["username"])) {
-                      echo '
+                <?php
+                if (isset($_SESSION["username"])) {
+                  echo '
                           <script>
                               document.querySelector("#login").style.display = "none";
                               document.querySelector("#register").style.display = "none";
                           </script>
                       ';
-
-                  }else{
-                      echo '
+                } else {
+                  echo '
                           <script>
                               document.querySelector("#logout").style.display = "none";
                               document.querySelector("#welcome").style.display = "none";
                           </script>
-                      ';                                        
-                  }
+                      ';
+                }
 
                 ?>
               </div>
@@ -139,94 +139,103 @@
       <!-- HERO CONTENT -->
 
       <!-- HERO CONTENT -->
-      <div class="hero-body">
+      <div class="hero-body" style="padding: 0;">
 
         <div class="container">
 
           <section class="content">
-          <?php
-            $sql = $conn -> query("SELECT id_usuario, tipo_usuario, senha, nome, email FROM usuarios WHERE nick ='$_SESSION[username]'");
 
-            $dados = mysqli_fetch_array($sql);
+            <?php
 
-            $email = $dados['email'];
+            $nome = explode(' ', $_SESSION['nome']);
 
-            $nome = explode(' ', $dados['nome']);
-            $_SESSION['id_usuario'] = $dados['id_usuario'];
-            $_SESSION['tp_usuario'] = $dados['tipo_usuario'];
-
-          ?>
+            ?>
 
             <div class="conBox">
+
               <form class="form" action="" method="get">
+
                 <h1 class="label has-text-centered">Olá, <?php echo $nome[0]; ?></h1>
                 <h5 class="label has-text-centered">Aqui você pode atualizar seus dados ou excluir sua conta CODEX:</h5>
 
-                <div class="field">
+                <fieldset class="inputsField">
+                  <div class="field">
+                    <label class="label">Nome:</label>
+                    <input class="input" type="text" name="nome" value="<?php echo $_SESSION['nome'] ?>" />
 
-                  <label class="label">Usuário: </label>
-                  <input class="input" type="text" name="user" placeholder="Usuário"
-                    value="<?php echo $_SESSION['username']?>" />
+                  </div>
 
-                </div>
+                  <div class="field">
 
-                <div class="field">
+                    <label class="label">Usuário: </label>
+                    <input class="input" type="text" name="user" placeholder="Usuário" value="<?php echo $_SESSION['username'] ?>" />
 
-                  <label class="label">E-mail: </label>
-                  <input class="input" type="text" name="mail" placeholder="E-mail"
-                    value="<?php echo $email ?>" />
+                  </div>
 
-                </div>
+                  <div class="field">
 
-                <div class="field">
+                    <label class="label">E-mail: </label>
+                    <input class="input" type="text" name="mail" placeholder="E-mail" value="<?php echo $_SESSION['email'] ?>" />
 
-                  <label class="label">Senha </label>
+                  </div>
 
-                  <!-- Trigger/Open The Modal -->
-                  <a id="myBtn" onclick="modalOn()">Alterar Senha</a>
+                  <div class="field">
 
-                </div>
+                    <label class="label">Senha </label>
+
+                    <!-- Trigger/Open The Modal -->
+                    <a id="myBtn" onclick="modalOn()">Alterar Senha</a>
+
+                  </div>
+
+                </fieldset>
 
                 <br>
 
                 <div class="botoes has-text-centered">
-                  <button class="button" type="submit" name='update' value="<?php echo $_SESSION['id_usuario']?>">
+                  <button class="button"  type="submit" name='update' value="<?php echo $_SESSION['id_usuario'] ?>">
                     <strong>Atualizar</strong>
                   </button>
 
-                  <button class= button type="submit" name="delete" value="<?php echo $_SESSION['id_usuario']?>">
-                    <strong>Deletar conta</strong>
+                  <button 
+                  style = "
+                    background-color: white; 
+                    border: 2px solid white; 
+                    cursor: pointer;
+                    margin-left: 30%;
+                  " type="submit" name="delete" value="<?php echo $_SESSION['id_usuario'] ?>">
+                    <img src="../../assets/svgs/delete.svg" width="30px" >
                   </button>
                 </div>
               </form>
             </div>
 
             <?php
-              #var_dump($_GET);
-              require_once "../../scripts/php/user/control.php";
-              if (isset($_GET['update'])) {
-                if (updateUser($conn,$email)==1) {
-                  echo"
+            #var_dump($_GET);
+            require_once "../../scripts/php/user/control.php";
+            if (isset($_GET['update'])) {
+              if (updateUser($conn, $_SESSION['id_usuario'], $_GET['nome'], $_GET['user'], $_GET['mail']) == 1) {
+                echo "
                     <script>
                       alert('Dados alterados com sucesso');
-                      location.href='../../index.php';
+                      location.href='./meu-perfil.php';
                     </script>
                   ";
-                }
               }
+            }
 
-              if (isset($_GET['delete'])) {
-                if (deleteUser($conn)==1) {
-                  session_destroy();
-                  echo"
+            if (isset($_GET['delete'])) {
+              if (deleteUser($conn) == 1) {
+                session_destroy();
+                echo "
                     <script>
                       alert('Conta deletada');
                       location.href='../../index.php';
                     </script>
-                  ";
-                }
+                ";
               }
-              
+            }
+
             ?>
 
           </section>
@@ -235,47 +244,47 @@
     </section>
   </main>
   <?php
-      require_once "update_pass.php";
-      if (isset($_POST['atual']) && isset($_POST['nova']) && isset($_POST['confirma'])) {
+  require_once "update_pass.php";
+  if (isset($_POST['atual']) && isset($_POST['nova']) && isset($_POST['confirma'])) {
 
-        
-        
-        // print_r($_POST);exit;
-        if (validPass($_POST['atual'],$conn)) {
-          echo"
+
+
+    // print_r($_POST);exit;
+    if (validPass($_POST['atual'], $conn)) {
+      echo "
             <script>
               alert('A senha atual está errada');
               history.back(); 
             </script>
           ";
-        }elseif(checkNewPass($_POST['nova'],$_POST['confirma'],$conn)){
-          echo"
+    } elseif (checkNewPass($_POST['nova'], $_POST['confirma'], $conn)) {
+      echo "
             <script>
               alert('As senhas não conferem! Lembrete: sua senha não pode ultrapassar 40 caracteres.');
                history.back();
              </script>
            ";
-        }else{
-          echo "
+    } else {
+      echo "
           <script>
             alert('Senha alterada com sucesso.');
             history.back();
           </script>
           ";
-        }
-      }
-    ?>
+    }
+  }
+  ?>
   <!-- Javascript -->
   <script>
-  function modalOn() {
-    document.getElementById('myModal').style.visibility = "visible";
-    document.getElementById('nav-bar').style.zIndex = '0';
-  }
+    function modalOn() {
+      document.getElementById('myModal').style.visibility = "visible";
+      document.getElementById('nav-bar').style.zIndex = '0';
+    }
 
-  function modalOff() {
-    document.getElementById('myModal').style.visibility = "hidden";
-    document.getElementById('nav-bar').style.zIndex = '1';
-  }
+    function modalOff() {
+      document.getElementById('myModal').style.visibility = "hidden";
+      document.getElementById('nav-bar').style.zIndex = '1';
+    }
   </script>
 </body>
 
