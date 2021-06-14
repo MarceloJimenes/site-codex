@@ -212,6 +212,7 @@ if (!isset($_SESSION['username'])) {
 
             <?php
             #var_dump($_GET);
+            //print_r($_SESSION);exit;
             require_once "../../scripts/php/user/control.php";
             if (isset($_GET['update'])) {
               if (updateUser($conn, $_SESSION['id_usuario'], $_GET['nome'], $_GET['user'], $_GET['mail']) == 1) {

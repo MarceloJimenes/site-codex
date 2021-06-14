@@ -116,6 +116,7 @@
 
       if ($fetchUserNick == 1) {
 				$data = $fetchForNick -> fetch_assoc();
+				$_SESSION['id_usuario'] = $data['id_usuario'];
 				$_SESSION['username'] = $data['nick'];
 				$_SESSION['nome'] = $data['nome'];
 				$_SESSION['email'] = $data['email'];
