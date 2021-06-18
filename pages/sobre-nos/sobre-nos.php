@@ -76,6 +76,12 @@
     border-radius: 29px;
     margin: 35px auto;
   }
+  .perfilCard:hover {
+    transition: 0.5s;
+    border-radius: 17px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-0.50em);
+  }
 
   .perfilImage {
     display: relative;
@@ -131,6 +137,25 @@
     width: 25px;
     margin-right: 5px;
   }
+
+  footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  .icon {
+    height: 40px;
+    width: 40px;
+    margin: 0 20px;
+    padding: 6px;
+  }
+  .icon:hover {
+    transition: 0.5s;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-0.25em);
+  }
+
   </style>
 
 </head>
@@ -365,6 +390,11 @@
       </div>
     </section>
   </main>
+
+  <footer>
+    <a class="icon" target="_blank" href="https://www.instagram.com/codex.coding.experience/"><img src="../../assets/icons/glyph-logo_May2016-ai.svg" alt="instagram-logo"></a>
+    <a class="icon" target="_blank" href="https://discord.gg/ScDVmTsacv"><img src="../../assets/icons/Discord-Logo-White.svg" alt="discord-logo"></a>
+  </footer>
 </body>
 
 </html>
