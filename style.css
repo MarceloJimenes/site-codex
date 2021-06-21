@@ -4,6 +4,26 @@
   color: #fff;
 }
 
+.icons-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+}
+.icon {
+  height: 40px;
+  width: 40px;
+  margin-top: 6px;
+  margin-left: 15px;
+  padding: 6px;
+}
+.icon:hover {
+  transition: 0.5s;
+  box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000080;
+  border-radius: 7px;
+  transform: translateY(0.25em);
+}
+
+
 .pixie-span {
   font-family: 'pro-pixie', sans-serif;
 }

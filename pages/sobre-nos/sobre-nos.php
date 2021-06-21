@@ -28,7 +28,7 @@
   }
 
   .container {
-    p adding: 0;
+    padding: 0;
   }
 
   .assetsLink {
@@ -152,7 +152,7 @@
   .icon:hover {
     transition: 0.5s;
     border-radius: 7px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000080;
     transform: translateY(-0.25em);
   }
 
