@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
-  <style>
+<style>
   /* General Style */
   @import url("../../theme/global.css");
 
@@ -211,8 +212,7 @@
                   <img src="../../assets/svgs/logout_white_24dp.svg" a>
                 </a>
 
-                <?php
-									session_start();
+                <?php 
 									if (isset($_SESSION["username"])) {
 										echo '
 											<script>

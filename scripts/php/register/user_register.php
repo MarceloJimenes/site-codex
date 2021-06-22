@@ -10,7 +10,6 @@
 
 <body>
   <?php
-    //var_dump($_POST);
     require_once '../../banco/conexao.php';
     require_once '../validations/nick.php';
     require_once '../validations/email.php';
