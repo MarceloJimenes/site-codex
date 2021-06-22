@@ -31,11 +31,6 @@
                 </p>
               </a>
 
-              <div class="icons-container">
-                <a class="icon" target="_blank" href="https://www.instagram.com/codex.coding.experience/"><img src="assets/icons/glyph-logo_May2016-ai.svg" alt="instagram-logo"></a>
-                <a class="icon" target="_blank" href="https://discord.gg/ScDVmTsacv"><img src="assets/icons/Discord-Logo-White.svg" alt="discord-logo"></a>
-              </div>
-
               <!-- Menu responsivo -->
               <span class="navbar-burger" data-target="navbarMenuHeroC">
                 <span></span>
