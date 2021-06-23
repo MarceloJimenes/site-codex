@@ -58,7 +58,7 @@
       </figure>
 
       <div class="information">
-        <h2 class="data">0</h2>
+        <h2 class="data">5</h2>
         <p class="topic">Usuários</p>
       </div>
     </div>
