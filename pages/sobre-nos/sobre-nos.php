@@ -140,9 +140,8 @@
   }
 
   .social-icons{
+    display: flex;
     justify-content: start;
-    margin-left: 0;
-    padding-left: 0;
   }
   .icon {
     height: 40px;
@@ -254,7 +253,7 @@
             </p>
             <p class="social-icons">
               <a class="icon" target="_blank" href="https://www.instagram.com/codex.coding.experience/"><img src="../../assets/icons/glyph-logo_May2016-ai.svg" alt="instagram-logo"></a>
-              <a class="icon" target="_blank" href="https://twitter.com/CODEX24057375"><img src="../../assets/icons/twitter.png" alt="twitter-logo"></a>
+              <a class="icon" target="_blank" href="https://twitter.com/CODEX24057375"><img src="../../assets/icons/Logo white.svg" alt="twitter-logo"></a>
               <a class="icon" target="_blank" href="https://discord.gg/ScDVmTsacv"><img src="../../assets/icons/Discord-Logo-White.svg" alt="discord-logo"></a>
             </p>
             
