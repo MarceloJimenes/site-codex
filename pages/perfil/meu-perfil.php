@@ -170,7 +170,7 @@ if (!isset($_SESSION['username'])) {
 
             <div class="conBox">
 
-              <form class="form" action="" method="get">
+              <form class="form" action="../../scripts/php/user/control.php" method="get">
 
                 <h1 class="label has-text-centered">Olá, <?php echo $nome[0]; ?></h1>
                 <h5 class="label has-text-centered">Aqui você pode atualizar seus dados ou excluir sua conta CODEX:</h5>
@@ -178,7 +178,7 @@ if (!isset($_SESSION['username'])) {
                 <fieldset class="inputsField">
                   <div class="field">
                     <label class="label">Nome:</label>
-                    <input class="input" type="text" name="nome" value="<?php echo $_SESSION['nome'] ?>" />
+                    <input class="input" type="text" name="nome" value="<?php echo $_SESSION['nome'] ?>"/>
 
                   </div>
 
@@ -210,37 +210,26 @@ if (!isset($_SESSION['username'])) {
                 <br>
 
                 <div class="containerButtons">
-                  <button class="button"  type="submit" name='update' value="<?php echo $_SESSION['id_usuario'] ?>">
+                  <a id="updateBtn" class="button" onclick="openUpdateModal()">
+                    <div>
+                      <strong>Atualizar</strong>
+                    </div>
+                  </a>
+                  <!--
+                  <button class="button"  type="submit" name='update' value="<?php //echo $_SESSION['id_usuario'] ?>">
                     <strong>Atualizar</strong>
-                  </button>
+                  </button> -->
 
                   <a id="myBtn" class="button space" onclick="openDeleteModal()">
                     <div>
                       <img class="iconDel" src="../../assets/svgs/delete.svg" width="30px">
                     </div>                 
                   </a>
+
+                  <input type="submit" value="" style="display: none;" id="submitButton">
                 </div>
               </form>
-            </div>
-
-            <?php
-            #var_dump($_GET);
-            //print_r($_SESSION);exit;
-            // require_once "../../scripts/php/user/control.php";
-            // if (isset($_GET['update'])) {
-            //   if (updateUser($conn, $_SESSION['id_usuario'], $_GET['nome'], $_GET['user'], $_GET['mail']) == 1) {
-            //     echo "
-            //         <script>
-            //           alert('Dados alterados com sucesso');
-            //           location.href='./meu-perfil.php';
-            //         </script>
-            //       ";
-            //   }
-            // }
-            
-
-            ?>
-
+            </div>        
           </section>
         </div>
       </div>
@@ -289,6 +278,31 @@ if (!isset($_SESSION['username'])) {
       document.getElementById('nav-bar').style.zIndex = '1';
     }
 
+    function openUpdateModal() {
+      Swal.fire({
+        title: 'Deseja atualizar seus dados?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#8B4FC2',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sim, atualizar!',
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+      
+          // location.href = "../../scripts/php/user/control.php?id="+<?php //echo $_SESSION['id_usuario']?>
+      
+          document.querySelector("#submitButton").click();
+
+          Swal.fire(
+            'Atualizado!',
+            'Sua conta foi atualizada.',
+            'success'
+          )
+        }
+      })
+    }
+
     function openDeleteModal() {
       Swal.fire({
         title: 'Você tem certeza?',
@@ -302,14 +316,11 @@ if (!isset($_SESSION['username'])) {
       }).then((result) => {
         if (result.isConfirmed) {
       
-          location.href = "../../scripts/php/user/control.php?id_usuario="+<?php 
-            echo $_SESSION['id_usuario']; 
-            
-            ?>+"";
+          location.href = "../../scripts/php/user/control.php?id_usuario="+<?php echo $_SESSION['id_usuario']?>+"";
       
           Swal.fire(
-            'Deleted!',
-            'Your file has been deleted.',
+            'Deletado!',
+            'Sua conta foi deletada.',
             'success'
           )
         }
