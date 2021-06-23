@@ -139,10 +139,10 @@
     margin-right: 5px;
   }
 
-  footer {
-    height: 100px;
-    display: flex;
-    justify-content: center;
+  .social-icons{
+    justify-content: start;
+    margin-left: 0;
+    padding-left: 0;
   }
   .icon {
     height: 40px;
@@ -245,15 +245,19 @@
           <div class="column">
             <p class="title is-3 is-spaced">Quem Somos?</p>
             <p class="about subtitle is- 5">
-              O projeto CODEX tem como objetivo o desenvolvimento de um aplicativo para treinamento e reforço das
-              habilidades de desenvolver códigos em diferentes linguagens de programação.
+              O CODEX é um aplicativo feito especialmente para você que sempre quis aprender programação mas nunca soube por onde começar
+            <p class="about subtitle is- 5">
+              A maioria das pessoas quando pensa em programação, imagina que para aprender é necessário ser fluente em inglês ou então ser ótimo em matemática. Com o objetivo de quebrar esses paradigmas, nosso aplicativo tem como objetivo te ensinar a programar de uma maneira didática e divertida e o melhor de tudo, gratuitamente!
             </p>
             <p class="about subtitle is- 5">
-              O framework e funcionalidade do CODEX foi baseado no aplicativo Duolingo, aplicativo para o aprendizado e
-              treito de um novo idioma, onde o usuário deve traduzir uma sentença, seja por meio de escrita ou fala e no
-              final pode passar à um próximo nível.
-              O CODEX funciona de forma parecida, onde o usuário pode começar a aprende.
+              Além disso você pode nos apoiar nas redes sociais como no Twitter e Instagram e ainda fazer parte da comunidade no discord, onde poderá conversar e estudar juntamente com aqueles que tem os mesmos objetivos que você!
             </p>
+            <p class="social-icons">
+              <a class="icon" target="_blank" href="https://www.instagram.com/codex.coding.experience/"><img src="../../assets/icons/glyph-logo_May2016-ai.svg" alt="instagram-logo"></a>
+              <a class="icon" target="_blank" href="https://twitter.com/CODEX24057375"><img src="../../assets/icons/twitter.png" alt="twitter-logo"></a>
+              <a class="icon" target="_blank" href="https://discord.gg/ScDVmTsacv"><img src="../../assets/icons/Discord-Logo-White.svg" alt="discord-logo"></a>
+            </p>
+            
           </div>
         </div>
       </div>
@@ -390,11 +394,6 @@
       </div>
     </section>
   </main>
-
-  <footer>
-    <a class="icon" target="_blank" href="https://www.instagram.com/codex.coding.experience/"><img src="../../assets/icons/glyph-logo_May2016-ai.svg" alt="instagram-logo"></a>
-    <a class="icon" target="_blank" href="https://discord.gg/ScDVmTsacv"><img src="../../assets/icons/Discord-Logo-White.svg" alt="discord-logo"></a>
-  </footer>
 </body>
 
 </html>
