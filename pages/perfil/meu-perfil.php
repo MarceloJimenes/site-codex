@@ -214,11 +214,11 @@ if (!isset($_SESSION['username'])) {
                     <strong>Atualizar</strong>
                   </button>
 
-                  <div class="button space">
-                    <a id="myBtn" onclick="openDeleteModal()">
+                  <a id="myBtn" class="button space" onclick="openDeleteModal()">
+                    <div>
                       <img class="iconDel" src="../../assets/svgs/delete.svg" width="30px">
-                    </a>
-                  </div>                 
+                    </div>                 
+                  </a>
                 </div>
               </form>
             </div>
@@ -302,7 +302,10 @@ if (!isset($_SESSION['username'])) {
       }).then((result) => {
         if (result.isConfirmed) {
       
-          location.href = "../../scripts/php/user/control.php?id_usuario="+<?php echo $_SESSION['id_usuario']; ?>+"";
+          location.href = "../../scripts/php/user/control.php?id_usuario="+<?php 
+            echo $_SESSION['id_usuario']; 
+            
+            ?>+"";
       
           Swal.fire(
             'Deleted!',
