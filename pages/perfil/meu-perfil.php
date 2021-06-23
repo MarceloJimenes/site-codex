@@ -18,6 +18,9 @@ if (!isset($_SESSION['username'])) {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   <link rel="stylesheet" href="style.css">
 
+  <link rel="stylesheet" href="../../node_modules/@sweetalert2/theme-dark/dark.css">
+	<script src="../../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
 
@@ -36,6 +39,20 @@ if (!isset($_SESSION['username'])) {
 
     .assetsLink:hover {
       color: #fff;
+    }
+
+    .containerButtons {
+      background-color: #f8f8f8;
+      display: flex;
+      width: 60%;
+      margin: 0 auto;
+    }
+    .space {
+      margin-left: 10px;
+    }
+
+    .iconDel {
+      display: flex;
     }
   </style>
 
@@ -192,14 +209,14 @@ if (!isset($_SESSION['username'])) {
 
                 <br>
 
-                <div class="botoes has-text-centered">
+                <div class="containerButtons">
                   <button class="button"  type="submit" name='update' value="<?php echo $_SESSION['id_usuario'] ?>">
                     <strong>Atualizar</strong>
                   </button>
 
-                  <div class="button">
-                    <a id="myBtn" onclick="modalOn()">
-                      <img src="../../assets/svgs/delete.svg" width="30px">
+                  <div class="button space">
+                    <a id="myBtn" onclick="openDeleteModal()">
+                      <img class="iconDel" src="../../assets/svgs/delete.svg" width="30px">
                     </a>
                   </div>                 
                 </div>
@@ -209,29 +226,18 @@ if (!isset($_SESSION['username'])) {
             <?php
             #var_dump($_GET);
             //print_r($_SESSION);exit;
-            require_once "../../scripts/php/user/control.php";
-            if (isset($_GET['update'])) {
-              if (updateUser($conn, $_SESSION['id_usuario'], $_GET['nome'], $_GET['user'], $_GET['mail']) == 1) {
-                echo "
-                    <script>
-                      alert('Dados alterados com sucesso');
-                      location.href='./meu-perfil.php';
-                    </script>
-                  ";
-              }
-            }
-
-            if (isset($_GET['delete'])) {
-              if (deleteUser($conn) == 1) {
-                session_destroy();
-                echo "
-                    <script>
-                      alert('Conta deletada');
-                      location.href='../../index.php';
-                    </script>
-                ";
-              }
-            }
+            // require_once "../../scripts/php/user/control.php";
+            // if (isset($_GET['update'])) {
+            //   if (updateUser($conn, $_SESSION['id_usuario'], $_GET['nome'], $_GET['user'], $_GET['mail']) == 1) {
+            //     echo "
+            //         <script>
+            //           alert('Dados alterados com sucesso');
+            //           location.href='./meu-perfil.php';
+            //         </script>
+            //       ";
+            //   }
+            // }
+            
 
             ?>
 
@@ -252,7 +258,7 @@ if (!isset($_SESSION['username'])) {
             <script>
               alert('A senha atual está errada');
               history.back(); 
-            </script>
+            </scrip>
           ";
     } elseif (checkNewPass($_POST['nova'], $_POST['confirma'], $conn)) {
       echo "
@@ -281,6 +287,30 @@ if (!isset($_SESSION['username'])) {
     function modalOff() {
       document.getElementById('myModal').style.visibility = "hidden";
       document.getElementById('nav-bar').style.zIndex = '1';
+    }
+
+    function openDeleteModal() {
+      Swal.fire({
+        title: 'Você tem certeza?',
+        text: "Você não poderá reverter esta ação!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#8B4FC2',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sim, deletar!',
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+      
+          location.href = "../../scripts/php/user/control.php?id_usuario="+<?php echo $_SESSION['id_usuario']; ?>+"";
+      
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          )
+        }
+      })
     }
   </script>
 </body>

@@ -1,8 +1,11 @@
 <?php
-  function deleteUser($conn){
-    $delete = $conn -> query("DELETE FROM usuarios WHERE id_usuario=".$_SESSION['id_usuario']);
-    if ($delete==1) {
-      return true;
+  require_once './../../banco/conexao.php';
+
+  if(isset($_GET['id_usuario'])){
+    $delete = $conn -> query("DELETE FROM usuarios WHERE id_usuario=".$_GET['id_usuario']);
+    if ($delete == true) {
+      session_destroy();
+      header("Location: ../../../index.php");
     }
 
   }
