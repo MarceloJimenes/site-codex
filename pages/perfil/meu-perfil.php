@@ -197,15 +197,11 @@ if (!isset($_SESSION['username'])) {
                     <strong>Atualizar</strong>
                   </button>
 
-                  <button 
-                  style = "
-                    background-color: white; 
-                    border: 2px solid white; 
-                    cursor: pointer;
-                    margin-left: 30%;
-                  " type="submit" name="delete" value="<?php echo $_SESSION['id_usuario'] ?>">
-                    <img src="../../assets/svgs/delete.svg" width="30px" >
-                  </button>
+                  <div class="button">
+                    <a id="myBtn" onclick="modalOn()">
+                      <img src="../../assets/svgs/delete.svg" width="30px">
+                    </a>
+                  </div>                 
                 </div>
               </form>
             </div>
