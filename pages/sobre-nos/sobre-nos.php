@@ -256,6 +256,11 @@
               <a class="icon" target="_blank" href="https://twitter.com/CODEX24057375"><img src="../../assets/icons/Logo white.svg" alt="twitter-logo"></a>
               <a class="icon" target="_blank" href="https://discord.gg/ScDVmTsacv"><img src="../../assets/icons/Discord-Logo-White.svg" alt="discord-logo"></a>
             </p>
+          </div>
+          <div class="owl-carousel owl-theme">
+            <div class="owl-lazy" data-src="../../assets/icons/twitter.png">
+
+            </div>
             
           </div>
         </div>
