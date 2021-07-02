@@ -9,22 +9,20 @@
   <!-- SweetAlert DarkTheme -->
   <link rel="stylesheet" href="../../../node_modules/@sweetalert2/theme-dark/dark.css">
   <script src="../../../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
-
-  <title>Document</title>
+  <style> 
+    body{
+      background-color: #4c0b8a;
+    }
+  </style>
+  <title>Sentiremos sua falta...</title>
 </head>
 
 <body>
   <?php
-  
   session_start();
-
   session_destroy();
   echo "
-  
     <script>
-    
-      setTimeout(function(){ location.href = '../../../index.php'; }, 2000);
-
       Swal.fire({
         icon: 'success',
         title: 'Adeus...&#128532;',
@@ -32,11 +30,9 @@
         showConfirmButton: false,
         timer: 2000
       })
-
+      setTimeout(function(){location.href = '../../../index.php'}, 2000);
     </script>
-
   ";
-
   ?>
 </body>
 

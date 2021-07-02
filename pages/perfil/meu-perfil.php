@@ -201,7 +201,7 @@ if (!isset($_SESSION['username'])) {
                     <label class="label">Senha </label>
 
                     <!-- Trigger/Open The Modal -->
-                    <a id="myBtn" onclick="modalOn()">Alterar Senha</a>
+                    <a id="myBtn" class="myBtn" onclick="modalOn()"><b>Alterar Senha</b></a>
 
                   </div>
 
@@ -222,8 +222,8 @@ if (!isset($_SESSION['username'])) {
 
                   <a id="myBtn" class="button space" onclick="openDeleteModal()">
                     <div>
-                      <img class="iconDel" src="../../assets/svgs/delete.svg" width="30px">
-                    </div>                 
+                      <strong>Deletar conta</strong>                        
+                    </div>
                   </a>
 
                   <input type="submit" value="" style="display: none;" id="submitButton">
@@ -289,15 +289,14 @@ if (!isset($_SESSION['username'])) {
         cancelButtonText: 'Cancelar'
       }).then((result) => {
         if (result.isConfirmed) {
-      
           // location.href = "../../scripts/php/user/control.php?id="+<?php //echo $_SESSION['id_usuario']?>
       
           document.querySelector("#submitButton").click();
 
           Swal.fire(
             'Atualizado!',
-            'Sua conta foi atualizada.',
-            'success'
+            'Seus dados foram atualizados.',
+            'sucess'
           )
         }
       })
@@ -318,11 +317,11 @@ if (!isset($_SESSION['username'])) {
       
           location.href = "../../scripts/php/user/control.php?id_usuario="+<?php echo $_SESSION['id_usuario']?>+"";
       
-          Swal.fire(
-            'Deletado!',
-            'Sua conta foi deletada.',
-            'success'
-          )
+          Swal.fire({
+            icon: 'success',
+            title: 'Conta deletada!',
+            timer: 2000
+          })
         }
       })
     }

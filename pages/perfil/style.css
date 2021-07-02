@@ -135,3 +135,11 @@ label {
   background-color: #8b52c0;
 }
 
+.myBtn{
+  color: #8734d4;
+  text-decoration: underline;
+}
+
+.myBtn:hover{
+  color:#cacaca;
+}

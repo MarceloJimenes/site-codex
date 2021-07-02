@@ -124,7 +124,14 @@
 				
         echo"
 					<script>
-						location.href = '../../index.php';
+						Swal.fire({
+							icon: 'success',
+							title: 'Aí sim!',
+							footer: 'Seja bem vindo, $_SESSION[nome]',
+							showConfirmButton: false,
+							timer: 3000
+						})
+						setTimeout(function(){location.href = '../../index.php'}, 2000);
 					</script>
 				";
 
@@ -138,7 +145,14 @@
 
         echo"
 					<script>
-						location.href = '../../index.php';
+						Swal.fire({
+							icon: 'success',
+							title: 'Aí sim!',
+							footer: 'Seja bem vindo, $_SESSION[nome]',
+							showConfirmButton: false,
+							timer: 3000
+						})
+						setTimeout(function(){location.href = '../../index.php'}, 2000);
 					</script>
 				";
 
@@ -152,27 +166,11 @@
 							showConfirmButton: false,
 							timer: 3000
 						})
-
 						setTimeout(function(){history.back()}, 1500);
 					</script>
 				";
       }
-
-    }else{
-			/*echo "
-				<script>
-					Swal.fire({
-						position: 'top',
-						toast: 'true',
-						icon: 'error',
-						title: 'Ops!',
-						footer: 'Os campos não podem estar vazios, tente novamente',
-						showConfirmButton: false,
-						timer: 5000
-					})
-				</script>
-			";*/
-		}
+    }	
 	?>
 </body>
 </html>
